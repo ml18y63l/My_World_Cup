@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Session Context Monitor</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: #0f0f13;
+    color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+  }
+  .widget {
+    width: 420px;
+    background: linear-gradient(145deg, #1a1a24, #16161e);
+    border-radius: 20px;
+    padding: 28px;
+    box-shadow:
+      0 0 0 1px rgba(255,255,255,0.06),
+      0 20px 60px rgba(0,0,0,0.5),
+      0 0 80px rgba(100, 80, 255, 0.05);
+    position: relative;
+  }
+  .widget::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    border-radius: 20px 20px 0 0;
+    background: linear-gradient(90deg, #6c5ce7, #a78bfa, #6c5ce7);
+    background-size: 200% 100%;
+    animation: shimmer 3s ease-in-out infinite;
+  }
+  @keyframes shimmer {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+  }
+  .header h2 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .header h2 .dot {
+    width: 8px; height: 8px;
+    background: #22c55e;
+    border-radius: 50%;
+    animation: pulse 2s ease-in-out infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(34,197,94,0.4); }
+    50% { opacity: 0.7; box-shadow: 0 0 0 6px rgba(34,197,94,0); }
+  }
+  .session-time {
+    font-size: 12px;
+    color: #6b7280;
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* Main gauge */
+  .gauge-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 24px;
+    position: relative;
+  }
+  .gauge-svg {
+    transform: rotate(-90deg);
+  }
+  .gauge-bg {
+    fill: none;
+    stroke: #1e1e2e;
+    stroke-width: 10;
+  }
+  .gauge-fill {
+    fill: none;
+    stroke-width: 10;
+    stroke-linecap: round;
+    transition: stroke-dashoffset 1s ease, stroke 0.5s ease;
+  }
+  .gauge-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  .gauge-percent {
+    font-size: 36px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1;
+  }
+  .gauge-label {
+    font-size: 11px;
+    color: #6b7280;
+    margin-top: 4px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  /* Stats row */
+  .stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+  .stat-card {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 12px;
+    padding: 14px 12px;
+    text-align: center;
+  }
+  .stat-value {
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+    font-variant-numeric: tabular-nums;
+  }
+  .stat-label {
+    font-size: 10px;
+    color: #6b7280;
+    margin-top: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  /* Breakdown bar */
+  .breakdown {
+    margin-bottom: 20px;
+  }
+  .breakdown-title {
+    font-size: 12px;
+    color: #6b7280;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .bar-container {
+    height: 10px;
+    background: #1e1e2e;
+    border-radius: 5px;
+    overflow: hidden;
+    display: flex;
+    margin-bottom: 12px;
+  }
+  .bar-segment {
+    height: 100%;
+    transition: width 1s ease;
+  }
+  .legend {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 11px;
+    color: #9ca3af;
+  }
+  .legend-dot {
+    width: 8px; height: 8px;
+    border-radius: 2px;
+    flex-shrink: 0;
+  }
+
+  /* Turn history mini-chart */
+  .turn-chart {
+    margin-bottom: 20px;
+  }
+  .turn-chart-title {
+    font-size: 12px;
+    color: #6b7280;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .chart-bars {
+    display: flex;
+    align-items: flex-end;
+    gap: 3px;
+    height: 50px;
+  }
+  .chart-bar {
+    flex: 1;
+    min-height: 3px;
+    border-radius: 2px 2px 0 0;
+    transition: height 0.5s ease;
+    position: relative;
+    cursor: pointer;
+  }
+  .chart-bar:hover {
+    opacity: 0.8;
+  }
+  .chart-bar:hover::after {
+    content: attr(data-tokens);
+    position: absolute;
+    bottom: calc(100% + 4px);
+    left: 50%;
+    transform: translateX(-50%);
+    background: #2a2a3a;
+    color: #e0e0e0;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 10px;
+    white-space: nowrap;
+    pointer-events: none;
+  }
+
+  /* Footer */
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 16px;
+    border-top: 1px solid rgba(255,255,255,0.06);
+  }
+  .model-badge {
+    font-size: 11px;
+    padding: 4px 10px;
+    background: rgba(108, 92, 231, 0.15);
+    color: #a78bfa;
+    border-radius: 6px;
+    border: 1px solid rgba(108, 92, 231, 0.2);
+    font-weight: 500;
+  }
+  .compact-hint {
+    font-size: 10px;
+    color: #4b5563;
+  }
+</style>
+</head>
+<body>
+
+<div class="widget">
+  <div class="header">
+    <h2><span class="dot"></span> Context Monitor</h2>
+    <span class="session-time" id="sessionTime">00:00:00</span>
+  </div>
+
+  <div class="gauge-container">
+    <svg class="gauge-svg" width="160" height="160">
+      <circle class="gauge-bg" cx="80" cy="80" r="68"></circle>
+      <circle class="gauge-fill" id="gaugeFill" cx="80" cy="80" r="68"
+        stroke="#6c5ce7"
+        stroke-dasharray="427.26"
+        stroke-dashoffset="427.26"></circle>
+    </svg>
+    <div class="gauge-center">
+      <div class="gauge-percent" id="gaugePercent">0%</div>
+      <div class="gauge-label">Context Used</div>
+    </div>
+  </div>
+
+  <div class="stats">
+    <div class="stat-card">
+      <div class="stat-value" id="usedTokens">0</div>
+      <div class="stat-label">Used (K)</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-value" id="remainTokens">0</div>
+      <div class="stat-label">Remaining (K)</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-value" id="turnCount">0</div>
+      <div class="stat-label">Turns</div>
+    </div>
+  </div>
+
+  <div class="breakdown">
+    <div class="breakdown-title">Token Breakdown</div>
+    <div class="bar-container">
+      <div class="bar-segment" id="barSystem" style="background:#6c5ce7; width:0%"></div>
+      <div class="bar-segment" id="barUser" style="background:#22c55e; width:0%"></div>
+      <div class="bar-segment" id="barAssistant" style="background:#f59e0b; width:0%"></div>
+      <div class="bar-segment" id="barTools" style="background:#ec4899; width:0%"></div>
+    </div>
+    <div class="legend">
+      <div class="legend-item"><div class="legend-dot" style="background:#6c5ce7"></div>System</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#22c55e"></div>User</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#f59e0b"></div>Assistant</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#ec4899"></div>Tools</div>
+    </div>
+  </div>
+
+  <div class="turn-chart">
+    <div class="turn-chart-title">Per-Turn Usage</div>
+    <div class="chart-bars" id="turnBars"></div>
+  </div>
+
+  <div class="footer">
+    <span class="model-badge">Claude Opus 4.8</span>
+    <span class="compact-hint" id="compactHint">Auto-compaction at 95%</span>
+  </div>
+</div>
+
+<script>
+const MAX_CONTEXT_K = 200; // 200K tokens context window
+
+// Simulated session data — updated each turn
+let sessionData = {
+  startTime: Date.now() - 1000 * 60 * 8, // started 8 min ago
+  maxContextK: MAX_CONTEXT_K,
+  usedK: 0,
+  breakdown: { system: 0, user: 0, assistant: 0, tools: 0 },
+  turns: [],
+  model: 'Claude Opus 4.8'
+};
+
+// --- Simulate realistic data growth ---
+function simulateTurn() {
+  const sysBase = 12;
+  const userTokens = 1.5 + Math.random() * 3;
+  const assistantTokens = 2 + Math.random() * 5;
+  const toolTokens = Math.random() * 4;
+
+  sessionData.breakdown.system = sysBase;
+  sessionData.breakdown.user += userTokens;
+  sessionData.breakdown.assistant += assistantTokens;
+  sessionData.breakdown.tools += toolTokens;
+
+  const turnTotal = userTokens + assistantTokens + toolTokens;
+  sessionData.turns.push(turnTotal);
+  sessionData.usedK = sysBase + sessionData.breakdown.user + sessionData.breakdown.assistant + sessionData.breakdown.tools;
+}
+
+// Generate initial turns
+for (let i = 0; i < 6; i++) simulateTurn();
+
+// --- Rendering ---
+function render() {
+  const pct = Math.min((sessionData.usedK / sessionData.maxContextK) * 100, 100);
+  const circumference = 2 * Math.PI * 68;
+  const offset = circumference - (pct / 100) * circumference;
+
+  // Color based on usage
+  let color = '#6c5ce7';
+  if (pct > 80) color = '#ef4444';
+  else if (pct > 60) color = '#f59e0b';
+  else if (pct > 40) color = '#22c55e';
+
+  const gaugeFill = document.getElementById('gaugeFill');
+  gaugeFill.style.strokeDashoffset = offset;
+  gaugeFill.style.stroke = color;
+
+  document.getElementById('gaugePercent').textContent = pct.toFixed(1) + '%';
+  document.getElementById('usedTokens').textContent = sessionData.usedK.toFixed(1);
+  document.getElementById('remainTokens').textContent = Math.max(0, sessionData.maxContextK - sessionData.usedK).toFixed(1);
+  document.getElementById('turnCount').textContent = sessionData.turns.length;
+
+  // Breakdown bars
+  const total = sessionData.usedK || 1;
+  document.getElementById('barSystem').style.width = (sessionData.breakdown.system / total * 100) + '%';
+  document.getElementById('barUser').style.width = (sessionData.breakdown.user / total * 100) + '%';
+  document.getElementById('barAssistant').style.width = (sessionData.breakdown.assistant / total * 100) + '%';
+  document.getElementById('barTools').style.width = (sessionData.breakdown.tools / total * 100) + '%';
+
+  // Turn bars
+  const barsEl = document.getElementById('turnBars');
+  const maxTurn = Math.max(...sessionData.turns);
+  barsEl.innerHTML = sessionData.turns.map((t, i) => {
+    const h = (t / maxTurn) * 100;
+    const barColor = i === sessionData.turns.length - 1 ? '#a78bfa' : 'rgba(167,139,250,0.3)';
+    return `<div class="chart-bar" style="height:${h}%; background:${barColor}" data-tokens="${t.toFixed(1)}K tokens"></div>`;
+  }).join('');
+
+  // Session timer
+  const elapsed = Date.now() - sessionData.startTime;
+  const s = Math.floor(elapsed / 1000) % 60;
+  const m = Math.floor(elapsed / 60000) % 60;
+  const h = Math.floor(elapsed / 3600000);
+  document.getElementById('sessionTime').textContent =
+    `${String(h).padStart(2,'0')}:${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`;
+
+  // Compact hint
+  if (pct > 90) {
+    document.getElementById('compactHint').textContent = '⚠ Compaction imminent!';
+    document.getElementById('compactHint').style.color = '#ef4444';
+  } else if (pct > 70) {
+    document.getElementById('compactHint').textContent = 'Context getting heavy';
+    document.getElementById('compactHint').style.color = '#f59e0b';
+  } else {
+    document.getElementById('compactHint').textContent = 'Auto-compaction at 95%';
+    document.getElementById('compactHint').style.color = '#4b5563';
+  }
+}
+
+// Initial render + timer
+render();
+setInterval(() => {
+  // Update timer every second
+  const elapsed = Date.now() - sessionData.startTime;
+  const s = Math.floor(elapsed / 1000) % 60;
+  const m = Math.floor(elapsed / 60000) % 60;
+  const h = Math.floor(elapsed / 3600000);
+  document.getElementById('sessionTime').textContent =
+    `${String(h).padStart(2,'0')}:${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`;
+}, 1000);
+
+// Simulate new turns arriving
+setInterval(() => {
+  simulateTurn();
+  render();
+}, 8000);
+</script>
+
+</body>
+</html>
