@@ -227,7 +227,9 @@ function main() {
       // Collect odds entry
       oddsList.push({
         team_id: teamWithGroup.team_id,
+        team_name: teamWithGroup.team_name,
         team_name_en: teamWithGroup.team_name_en,
+        country_code: teamWithGroup.country_code,
         odds: generateOdds(teamWithGroup.fifa_ranking),
       });
     }
