@@ -1,0 +1,242 @@
+[
+  {
+    "team_id": "ARG",
+    "team_name_en": "Argentina",
+    "odds": 4
+  },
+  {
+    "team_id": "FRA",
+    "team_name_en": "France",
+    "odds": 12.04
+  },
+  {
+    "team_id": "GER",
+    "team_name_en": "Germany",
+    "odds": 20.08
+  },
+  {
+    "team_id": "ENG",
+    "team_name_en": "England",
+    "odds": 28.12
+  },
+  {
+    "team_id": "BRA",
+    "team_name_en": "Brazil",
+    "odds": 36.16
+  },
+  {
+    "team_id": "POR",
+    "team_name_en": "Portugal",
+    "odds": 44.2
+  },
+  {
+    "team_id": "NED",
+    "team_name_en": "Netherlands",
+    "odds": 52.24
+  },
+  {
+    "team_id": "ESP",
+    "team_name_en": "Spain",
+    "odds": 60.28
+  },
+  {
+    "team_id": "ITA",
+    "team_name_en": "Italy",
+    "odds": 68.32
+  },
+  {
+    "team_id": "CRO",
+    "team_name_en": "Croatia",
+    "odds": 76.36
+  },
+  {
+    "team_id": "BEL",
+    "team_name_en": "Belgium",
+    "odds": 84.4
+  },
+  {
+    "team_id": "COL",
+    "team_name_en": "Colombia",
+    "odds": 92.44
+  },
+  {
+    "team_id": "USA",
+    "team_name_en": "United States",
+    "odds": 100.48
+  },
+  {
+    "team_id": "MAR",
+    "team_name_en": "Morocco",
+    "odds": 100.48
+  },
+  {
+    "team_id": "URU",
+    "team_name_en": "Uruguay",
+    "odds": 108.53
+  },
+  {
+    "team_id": "MEX",
+    "team_name_en": "Mexico",
+    "odds": 116.57
+  },
+  {
+    "team_id": "SUI",
+    "team_name_en": "Switzerland",
+    "odds": 124.61
+  },
+  {
+    "team_id": "JPN",
+    "team_name_en": "Japan",
+    "odds": 140.69
+  },
+  {
+    "team_id": "SEN",
+    "team_name_en": "Senegal",
+    "odds": 156.77
+  },
+  {
+    "team_id": "DEN",
+    "team_name_en": "Denmark",
+    "odds": 164.81
+  },
+  {
+    "team_id": "AUT",
+    "team_name_en": "Austria",
+    "odds": 172.85
+  },
+  {
+    "team_id": "KOR",
+    "team_name_en": "South Korea",
+    "odds": 180.89
+  },
+  {
+    "team_id": "UKR",
+    "team_name_en": "Ukraine",
+    "odds": 188.93
+  },
+  {
+    "team_id": "IRN",
+    "team_name_en": "Iran",
+    "odds": 196.97
+  },
+  {
+    "team_id": "SWE",
+    "team_name_en": "Sweden",
+    "odds": 205.01
+  },
+  {
+    "team_id": "TUR",
+    "team_name_en": "Turkey",
+    "odds": 213.05
+  },
+  {
+    "team_id": "POL",
+    "team_name_en": "Poland",
+    "odds": 221.09
+  },
+  {
+    "team_id": "WAL",
+    "team_name_en": "Wales",
+    "odds": 229.13
+  },
+  {
+    "team_id": "CAN",
+    "team_name_en": "Canada",
+    "odds": 237.17
+  },
+  {
+    "team_id": "HUN",
+    "team_name_en": "Hungary",
+    "odds": 245.21
+  },
+  {
+    "team_id": "ECU",
+    "team_name_en": "Ecuador",
+    "odds": 253.25
+  },
+  {
+    "team_id": "SRB",
+    "team_name_en": "Serbia",
+    "odds": 261.29
+  },
+  {
+    "team_id": "CZE",
+    "team_name_en": "Czech Republic",
+    "odds": 269.33
+  },
+  {
+    "team_id": "TUN",
+    "team_name_en": "Tunisia",
+    "odds": 277.37
+  },
+  {
+    "team_id": "NGA",
+    "team_name_en": "Nigeria",
+    "odds": 285.41
+  },
+  {
+    "team_id": "PER",
+    "team_name_en": "Peru",
+    "odds": 301.49
+  },
+  {
+    "team_id": "SCO",
+    "team_name_en": "Scotland",
+    "odds": 309.54
+  },
+  {
+    "team_id": "AUS",
+    "team_name_en": "Australia",
+    "odds": 317.58
+  },
+  {
+    "team_id": "GHA",
+    "team_name_en": "Ghana",
+    "odds": 333.66
+  },
+  {
+    "team_id": "CMR",
+    "team_name_en": "Cameroon",
+    "odds": 357.78
+  },
+  {
+    "team_id": "CRC",
+    "team_name_en": "Costa Rica",
+    "odds": 365.82
+  },
+  {
+    "team_id": "KSA",
+    "team_name_en": "Saudi Arabia",
+    "odds": 381.9
+  },
+  {
+    "team_id": "CHI",
+    "team_name_en": "Chile",
+    "odds": 397.98
+  },
+  {
+    "team_id": "PRY",
+    "team_name_en": "Paraguay",
+    "odds": 414.06
+  },
+  {
+    "team_id": "QAT",
+    "team_name_en": "Qatar",
+    "odds": 438.18
+  },
+  {
+    "team_id": "RSA",
+    "team_name_en": "South Africa",
+    "odds": 478.38
+  },
+  {
+    "team_id": "CHN",
+    "team_name_en": "China",
+    "odds": 639.19
+  },
+  {
+    "team_id": "NZL",
+    "team_name_en": "New Zealand",
+    "odds": 759.8
+  }
+]

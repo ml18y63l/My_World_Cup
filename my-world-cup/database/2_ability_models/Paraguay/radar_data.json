@@ -1,0 +1,10 @@
+{
+  "attack": 60,
+  "defense": 63,
+  "control": 64,
+  "status": 59,
+  "experience": 49,
+  "place_kick": 61,
+  "superstar": 56,
+  "penalty": 47
+}
