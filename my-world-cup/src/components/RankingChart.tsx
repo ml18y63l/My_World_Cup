@@ -42,7 +42,7 @@ export function RankingChart({
             : BAR_GRADIENTS[idx % BAR_GRADIENTS.length];
 
           return (
-            <div key={item.team_name} className="flex items-center gap-1 text-[10px]">
+            <div key={`${idx}-${item.team_name}`} className="flex items-center gap-1 text-[10px]">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={`https://flagcdn.com/w16/${item.country_code}.png`}
