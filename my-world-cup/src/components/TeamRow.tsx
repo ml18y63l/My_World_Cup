@@ -17,14 +17,6 @@ export function TeamRow({ team }: { team: TeamOverall }) {
           width={18}
           height={13}
           className="rounded-[1px] object-cover"
-          onError={(e) => {
-            const target = e.currentTarget;
-            target.style.display = "none";
-            const fallback = document.createElement("span");
-            fallback.textContent = team.team_id;
-            fallback.className = "text-[9px] text-gray-400 font-mono w-[18px] text-center";
-            target.parentNode?.insertBefore(fallback, target);
-          }}
         />
         <span className="font-medium text-[11px]">{team.team_name}</span>
       </div>

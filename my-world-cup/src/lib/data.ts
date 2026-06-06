@@ -2,7 +2,7 @@
 
 import fs from "fs";
 import path from "path";
-import type { TeamProfile, RadarData, TeamOverall, OddsEntry, GroupData } from "@/types/team";
+import type { TeamProfile, RadarMetrics, TeamOverall, OddsEntry, GroupData } from "@/types/team";
 import { GROUP_COLORS } from "@/types/team";
 import { calculateOverallScore } from "./score";
 
@@ -30,7 +30,7 @@ export function getAllTeamProfiles(): TeamProfile[] {
 /**
  * 读取指定球队的 radar_data.json
  */
-export function getRadarData(teamNameEn: string): RadarData | null {
+export function getRadarData(teamNameEn: string): RadarMetrics | null {
   const filePath = path.join(DB_DIR, teamNameEn, "radar_data.json");
   if (!fs.existsSync(filePath)) return null;
   return JSON.parse(fs.readFileSync(filePath, "utf-8"));
@@ -43,7 +43,7 @@ export function getAllTeamsWithOverall(): TeamOverall[] {
   const profiles = getAllTeamProfiles();
   return profiles.map((profile) => {
     const radar = getRadarData(profile.team_name_en);
-    const overall_score = radar ? calculateOverallScore(radar.metrics) : 0;
+    const overall_score = radar ? calculateOverallScore(radar) : 0;
     return { ...profile, overall_score };
   });
 }
