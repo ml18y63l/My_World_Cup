@@ -42,8 +42,8 @@ export function RankingChart({
             : BAR_GRADIENTS[idx % BAR_GRADIENTS.length];
 
           return (
-            <div key={`${idx}-${item.team_name}`} className="flex items-center gap-1 text-[10px]">
-              <span className="w-10 font-medium truncate">{item.team_name}</span>
+            <div key={`${idx}-${item.team_name}`} className="flex items-center gap-1.5 text-[10px]">
+              <span className="w-14 shrink-0 font-medium truncate">{item.team_name}</span>
               <div className="flex-1 bg-[#eef0f3] rounded-[3px] h-3.5 overflow-hidden">
                 <div
                   className="h-full rounded-[3px]"
@@ -53,7 +53,7 @@ export function RankingChart({
                   }}
                 />
               </div>
-              <span className="w-6 text-right font-bold">{item.displayValue}</span>
+              <span className="w-8 shrink-0 text-right font-bold">{item.displayValue}</span>
             </div>
           );
         })}
