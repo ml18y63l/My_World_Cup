@@ -43,15 +43,7 @@ export function RankingChart({
 
           return (
             <div key={`${idx}-${item.team_name}`} className="flex items-center gap-1 text-[10px]">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src={`https://flagcdn.com/w16/${item.country_code}.png`}
-                alt={item.team_name}
-                width={14}
-                height={10}
-                className="rounded-[1px] object-cover"
-              />
-              <span className="w-8 font-medium truncate">{item.team_name}</span>
+              <span className="w-10 font-medium truncate">{item.team_name}</span>
               <div className="flex-1 bg-[#eef0f3] rounded-[3px] h-3.5 overflow-hidden">
                 <div
                   className="h-full rounded-[3px]"
