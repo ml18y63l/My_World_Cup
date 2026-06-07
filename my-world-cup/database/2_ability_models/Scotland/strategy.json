@@ -1,8 +1,8 @@
 {
   "team_id": "SCO",
   "formation": "4-3-3",
-  "style": "counter_attack",
-  "pressing_intensity": "medium",
-  "defensive_line": "mid",
-  "transition_speed": "medium"
+  "style": "possession",
+  "pressing_intensity": "high",
+  "defensive_line": "high",
+  "transition_speed": "slow"
 }

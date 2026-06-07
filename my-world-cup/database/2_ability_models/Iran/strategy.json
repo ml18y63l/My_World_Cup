@@ -1,8 +1,8 @@
 {
   "team_id": "IRA",
-  "formation": "4-4-2",
-  "style": "defensive",
-  "pressing_intensity": "low",
-  "defensive_line": "low",
+  "formation": "4-2-3-1",
+  "style": "balanced",
+  "pressing_intensity": "medium",
+  "defensive_line": "mid",
   "transition_speed": "medium"
 }

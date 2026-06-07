@@ -1,8 +1,8 @@
 {
   "team_id": "SWE",
   "formation": "4-4-2",
-  "style": "defensive",
-  "pressing_intensity": "low",
-  "defensive_line": "low",
+  "style": "balanced",
+  "pressing_intensity": "medium",
+  "defensive_line": "mid",
   "transition_speed": "medium"
 }

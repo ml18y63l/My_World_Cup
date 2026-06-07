@@ -18,28 +18,26 @@ function getTeamNames() {
 
     // Get all directories that look like team names
     const teamNames = [];
+    const teamCodes = [];
     const items = fs.readdirSync(databasePath);
 
     for (const item of items) {
         const itemPath = path.join(databasePath, item);
         if (fs.statSync(itemPath).isDirectory()) {
             teamNames.push(item);
+
+            // Get 3-letter team codes
+            if (item.includes(' ')) {
+                const parts = item.split(' ');
+                const code = parts[parts.length - 1];
+                teamCodes.push(code);
+            } else {
+                teamCodes.push(item.substring(0, 3).toUpperCase());
+            }
         }
     }
 
-    // Get 3-letter team codes from team_names
-    const teamCodes = [];
-    for (const name of teamNames) {
-        if (name.includes(' ')) {
-            const parts = name.split(' ');
-            const code = parts[parts.length - 1];
-            teamCodes.push(code);
-        } else {
-            teamCodes.push(name.substring(0, 3).toUpperCase());
-        }
-    }
-
-    return teamCodes;
+    return { teamNames, teamCodes };
 }
 
 function getTeamOverallScore(teamName) {
@@ -58,59 +56,85 @@ function getTeamOverallScore(teamName) {
     return 75; // Default if not found
 }
 
-function generateStrategy(teamId, overallScore) {
-    // Determine possible styles based on overall score
-    let possibleStyles;
-    if (overallScore > 85) {
-        possibleStyles = ['possession', 'pressing'];
-    } else if (overallScore >= 75) {
-        possibleStyles = ['balanced', 'possession', 'pressing'];
-    } else if (overallScore >= 65) {
-        possibleStyles = ['balanced', 'counter_attack', 'defensive'];
-    } else {
-        possibleStyles = ['defensive', 'counter_attack'];
+function readProfile(teamNameDir) {
+    const profileFile = `my-world-cup/database/2_ability_models/${teamNameDir}/profile.json`;
+    if (fs.existsSync(profileFile)) {
+        const data = fs.readFileSync(profileFile, 'utf8');
+        return JSON.parse(data);
+    }
+    return null;
+}
+
+function determineStyleFromFormation(formation, overallScore) {
+    // Map formations to styles
+    const formationStyleMap = {
+        '4-3-3': 'possession',
+        '4-2-3-1': 'balanced',
+        '4-4-2': 'balanced',
+        '4-5-1': 'defensive',
+        '3-4-3': 'possession',
+        '3-5-2': 'defensive',
+        '5-3-2': 'defensive'
+    };
+
+    const style = formationStyleMap[formation] || 'balanced';
+
+    // Adjust style based on overall score
+    const styleOptions = [style];
+    if (overallScore > 75) {
+        if (style === 'balanced') {
+            styleOptions.push('possession', 'pressing');
+        } else if (style === 'defensive' && overallScore > 85) {
+            styleOptions.push('balanced');
+        }
     }
 
-    const style = possibleStyles[Math.floor(random() * possibleStyles.length)];
+    return styleOptions[Math.floor(random() * styleOptions.length)];
+}
 
-    // Map styles to attributes
-    const styleAttributes = {
-        'possession': {
-            pressing_intensity: ['medium', 'high'][Math.floor(random() * 2)],
-            defensive_line: ['mid', 'high'][Math.floor(random() * 2)],
-            transition_speed: ['medium', 'slow'][Math.floor(random() * 2)]
-        },
-        'counter_attack': {
-            pressing_intensity: ['low', 'medium'][Math.floor(random() * 2)],
-            defensive_line: ['low', 'mid'][Math.floor(random() * 2)],
-            transition_speed: ['fast', 'medium'][Math.floor(random() * 2)]
-        },
-        'pressing': {
-            pressing_intensity: 'high',
-            defensive_line: ['high', 'mid'][Math.floor(random() * 2)],
-            transition_speed: ['fast', 'medium'][Math.floor(random() * 2)]
-        },
-        'defensive': {
-            pressing_intensity: 'low',
-            defensive_line: 'low',
-            transition_speed: ['slow', 'medium'][Math.floor(random() * 2)]
-        },
-        'balanced': {
-            pressing_intensity: 'medium',
-            defensive_line: 'mid',
-            transition_speed: 'medium'
-        }
-    };
+function generateStrategy(teamId, overallScore, baseFormation) {
+    // If base_formation is provided from profile, use it directly
+    if (baseFormation) {
+        const style = determineStyleFromFormation(baseFormation, overallScore);
+        const styleAttributes = {
+            'possession': {
+                pressing_intensity: ['medium', 'high'][Math.floor(random() * 2)],
+                defensive_line: ['mid', 'high'][Math.floor(random() * 2)],
+                transition_speed: ['medium', 'slow'][Math.floor(random() * 2)]
+            },
+            'counter_attack': {
+                pressing_intensity: ['low', 'medium'][Math.floor(random() * 2)],
+                defensive_line: ['low', 'mid'][Math.floor(random() * 2)],
+                transition_speed: ['fast', 'medium'][Math.floor(random() * 2)]
+            },
+            'pressing': {
+                pressing_intensity: 'high',
+                defensive_line: ['high', 'mid'][Math.floor(random() * 2)],
+                transition_speed: ['fast', 'medium'][Math.floor(random() * 2)]
+            },
+            'defensive': {
+                pressing_intensity: 'low',
+                defensive_line: 'low',
+                transition_speed: ['slow', 'medium'][Math.floor(random() * 2)]
+            },
+            'balanced': {
+                pressing_intensity: 'medium',
+                defensive_line: 'mid',
+                transition_speed: 'medium'
+            }
+        };
 
-    // Formation weights by style
-    const formationWeights = {
-        'possession': {'4-3-3': 0.5, '4-2-3-1': 0.3, '3-4-3': 0.2},
-        'pressing': {'4-3-3': 0.6, '4-4-2': 0.3, '3-5-2': 0.1},
-        'defensive': {'5-3-2': 0.5, '4-4-2': 0.3, '4-5-1': 0.2},
-        'counter_attack': {'4-2-3-1': 0.5, '4-3-3': 0.3, '3-4-3': 0.2},
-        'balanced': {'4-3-3': 0.4, '4-2-3-1': 0.4, '4-4-2': 0.2}
-    };
+        return {
+            team_id: teamId,
+            formation: baseFormation,
+            style: style,
+            pressing_intensity: styleAttributes[style].pressing_intensity,
+            defensive_line: styleAttributes[style].defensive_line,
+            transition_speed: styleAttributes[style].transition_speed
+        };
+    }
 
+    // Fallback to original logic if no base_formation provided
     const formations = Object.keys(formationWeights[style]);
     const weights = Object.values(formationWeights[style]);
     let formation = formations[0];
@@ -135,7 +159,7 @@ function generateStrategy(teamId, overallScore) {
     };
 }
 
-function generateRecentForm(teamId, overallScore) {
+function generateRecentForm(teamId, overallScore, allTeamNames, teamNameDir) {
     // Determine W/D/L distribution based on overall score
     let wins, draws, losses;
 
@@ -157,14 +181,8 @@ function generateRecentForm(teamId, overallScore) {
 
     // Create result list
     const results = [];
-    const opponents = [
-        "巴西", "法国", "英格兰", "德国", "西班牙", "意大利", "葡萄牙", "荷兰",
-        "克罗地亚", "阿根廷", "乌拉圭", "哥伦比亚", "墨西哥", "美国", "日本",
-        "韩国", "澳大利亚", "智利", "秘鲁", "厄瓜多尔", "喀麦隆", "尼日利亚",
-        "塞内加尔", "加纳", "摩洛哥", "阿尔及利亚", "突尼斯", "埃及", "沙特",
-        "伊朗", "伊拉克", "阿联酋", "约旦", "黎巴嫩", "巴勒斯坦", "叙利亚",
-        "乌兹别克斯坦", "哈萨克斯坦", "泰国", "越南", "印尼", "马来西亚", "新加坡"
-    ];
+    // Create opponents list from all team names, excluding current team
+    const opponents = allTeamNames.filter(name => name !== teamNameDir);
 
     const resultTypes = [];
     for (let i = 0; i < wins; i++) resultTypes.push('W');
@@ -288,7 +306,7 @@ function main() {
 
     try {
         // Get team names
-        const teamCodes = getTeamNames();
+        const { teamNames, teamCodes } = getTeamNames();
         console.log(`Found ${teamCodes.length} teams: ${teamCodes.join(', ')}`);
 
         // Generate strategy.json and recent_form.json for each team
@@ -321,17 +339,18 @@ function main() {
                 continue;
             }
 
-            // Get overall score
+            // Get overall score and profile
             const overallScore = getTeamOverallScore(teamNameDir);
+            const profile = readProfile(teamNameDir);
 
             // Generate strategy
-            const strategy = generateStrategy(teamId, overallScore);
+            const strategy = generateStrategy(teamId, overallScore, profile.base_formation);
             const strategyFile = `my-world-cup/database/2_ability_models/${teamNameDir}/strategy.json`;
 
             fs.writeFileSync(strategyFile, JSON.stringify(strategy, null, 2), 'utf8');
 
             // Generate recent form
-            const recentForm = generateRecentForm(teamId, overallScore);
+            const recentForm = generateRecentForm(teamId, overallScore, teamNames, teamNameDir);
             const formFile = `my-world-cup/database/2_ability_models/${teamNameDir}/recent_form.json`;
 
             fs.writeFileSync(formFile, JSON.stringify(recentForm, null, 2), 'utf8');

@@ -1,8 +1,8 @@
 {
   "team_id": "WAL",
-  "formation": "4-4-2",
-  "style": "defensive",
-  "pressing_intensity": "low",
-  "defensive_line": "low",
-  "transition_speed": "medium"
+  "formation": "3-4-3",
+  "style": "possession",
+  "pressing_intensity": "high",
+  "defensive_line": "high",
+  "transition_speed": "slow"
 }

@@ -1,8 +1,8 @@
 {
   "team_id": "ENG",
-  "formation": "4-4-2",
-  "style": "pressing",
+  "formation": "4-3-3",
+  "style": "possession",
   "pressing_intensity": "high",
-  "defensive_line": "mid",
-  "transition_speed": "medium"
+  "defensive_line": "high",
+  "transition_speed": "slow"
 }

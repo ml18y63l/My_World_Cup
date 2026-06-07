@@ -1,7 +1,7 @@
 {
   "team_id": "GHA",
-  "formation": "4-3-3",
-  "style": "counter_attack",
+  "formation": "4-2-3-1",
+  "style": "balanced",
   "pressing_intensity": "medium",
   "defensive_line": "mid",
   "transition_speed": "medium"
