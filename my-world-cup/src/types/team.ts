@@ -40,6 +40,39 @@ export interface OddsEntry {
   team_name_en: string;
   country_code: string;
   odds: number;
+  win_odds_base: number;
+  draw_odds_base: number;
+  loss_odds_base: number;
+}
+
+// --- Pre-match analysis types ---
+
+export interface StrategyData {
+  team_id: string;
+  formation: string;
+  style: "possession" | "counter_attack" | "pressing" | "balanced" | "defensive";
+  pressing_intensity: "high" | "medium" | "low";
+  defensive_line: "high" | "mid" | "low";
+  transition_speed: "fast" | "medium" | "slow";
+}
+
+export interface MatchRecord {
+  opponent: string;
+  result: "W" | "D" | "L";
+  score: string;
+  type: "friendly" | "qualifier" | "tournament";
+}
+
+export interface RecentFormData {
+  team_id: string;
+  last_10: MatchRecord[];
+  summary: {
+    wins: number;
+    draws: number;
+    losses: number;
+    goals_scored: number;
+    goals_conceded: number;
+  };
 }
 
 export interface GroupData {

@@ -1,4 +1,4 @@
-import type { TeamProfile, RadarMetrics } from "./team";
+import type { TeamProfile, RadarMetrics, StrategyData, RecentFormData, OddsEntry } from "./team";
 
 /** 传入模拟引擎的完整球队数据 */
 export interface TeamMatchData {
@@ -11,6 +11,9 @@ export interface TeamMatchData {
 export interface H2HPageData {
   teams: Array<TeamProfile & { overall_score: number }>;
   radarMap: Record<string, RadarMetrics>;
+  strategyMap: Record<string, StrategyData>;
+  formMap: Record<string, RecentFormData>;
+  oddsMap: Record<string, OddsEntry>;
 }
 
 /** 单个维度分析 */
