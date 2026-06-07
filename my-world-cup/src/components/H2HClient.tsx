@@ -5,6 +5,9 @@ import type { H2HPageData, SimulationResult, TeamMatchData } from "@/types/simul
 import { TeamSelect } from "./TeamSelect";
 import { RadarCompareChart } from "./RadarCompareChart";
 import { TeamInfoCard } from "./TeamInfoCard";
+import { OddsCompare } from "./OddsCompare";
+import { RecentForm } from "./RecentForm";
+import { TacticsAnalysis } from "./TacticsAnalysis";
 import { MatchResult } from "./MatchResult";
 import { simulateMatch } from "@/lib/simulation";
 
@@ -13,7 +16,7 @@ interface H2HClientProps {
 }
 
 export function H2HClient({ data }: H2HClientProps) {
-  const { teams, radarMap } = data;
+  const { teams, radarMap, strategyMap, formMap, oddsMap } = data;
   const [teamAName, setTeamAName] = useState<string | null>(null);
   const [teamBName, setTeamBName] = useState<string | null>(null);
   const [result, setResult] = useState<SimulationResult | null>(null);
@@ -38,14 +41,12 @@ export function H2HClient({ data }: H2HClientProps) {
 
   function handleSimulate() {
     if (!teamA || !teamB) return;
-    const simResult = simulateMatch(teamA, teamB);
-    setResult(simResult);
+    setResult(simulateMatch(teamA, teamB));
   }
 
   function handleResimulate() {
     if (!teamA || !teamB) return;
-    const simResult = simulateMatch(teamA, teamB);
-    setResult(simResult);
+    setResult(simulateMatch(teamA, teamB));
   }
 
   function handleTeamAChange(name: string | null) {
@@ -82,20 +83,9 @@ export function H2HClient({ data }: H2HClientProps) {
             disabled={teamAName}
           />
         </div>
-
-        {bothSelected && (
-          <div className="flex justify-center mt-4">
-            <button
-              onClick={handleSimulate}
-              className="px-6 py-2.5 bg-[#e53e3e] text-white text-sm font-semibold rounded-lg hover:bg-[#c53030] transition-colors active:scale-95"
-            >
-              ⚽ 开始模拟
-            </button>
-          </div>
-        )}
       </div>
 
-      {/* Step 2: Pre-match analysis */}
+      {/* Step 2: Pre-match comparison */}
       {bothSelected && teamA && teamB && (
         <>
           {/* Radar chart */}
@@ -116,6 +106,43 @@ export function H2HClient({ data }: H2HClientProps) {
               <TeamInfoCard team={teamA} accentColor="red" />
               <TeamInfoCard team={teamB} accentColor="blue" />
             </div>
+          </div>
+
+          {/* Pre-match deep analysis */}
+          <div className="mb-4">
+            <h2 className="text-[15px] font-bold text-[#1a1a2e] mb-3">赛前深度分析</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+              <OddsCompare
+                oddsA={oddsMap[teamA.profile.team_name_en]}
+                oddsB={oddsMap[teamB.profile.team_name_en]}
+                nameA={teamA.profile.team_name}
+                nameB={teamB.profile.team_name}
+              />
+              <RecentForm
+                formA={formMap[teamA.profile.team_name_en]}
+                formB={formMap[teamB.profile.team_name_en]}
+                nameA={teamA.profile.team_name}
+                nameB={teamB.profile.team_name}
+              />
+              <TacticsAnalysis
+                strategyA={strategyMap[teamA.profile.team_name_en]}
+                strategyB={strategyMap[teamB.profile.team_name_en]}
+                metricsA={teamA.metrics}
+                metricsB={teamB.metrics}
+                nameA={teamA.profile.team_name}
+                nameB={teamB.profile.team_name}
+              />
+            </div>
+          </div>
+
+          {/* Simulate button */}
+          <div className="flex justify-center mb-4">
+            <button
+              onClick={handleSimulate}
+              className="px-6 py-2.5 bg-[#e53e3e] text-white text-sm font-semibold rounded-lg hover:bg-[#c53030] transition-colors active:scale-95"
+            >
+              ⚽ 开始模拟
+            </button>
           </div>
         </>
       )}
