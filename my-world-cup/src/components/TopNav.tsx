@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const NAV_ITEMS = [
   { label: "赛事概览", href: "/" },
@@ -6,7 +9,9 @@ const NAV_ITEMS = [
   { label: "对阵模拟", href: "/h2h" },
 ];
 
-export function TopNav({ currentPath = "/" }: { currentPath?: string }) {
+export function TopNav() {
+  const currentPath = usePathname();
+
   return (
     <header className="bg-[#1a1a2e] px-5 py-2.5 flex items-center gap-4">
       <span className="text-white font-bold text-base">🏆 WC 2026</span>

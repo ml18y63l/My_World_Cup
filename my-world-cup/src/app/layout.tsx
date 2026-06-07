@@ -18,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="zh-CN">
       <body className={`${inter.className} antialiased`}>
-        <TopNav currentPath="/" />
+        <TopNav />
         {children}
       </body>
     </html>
