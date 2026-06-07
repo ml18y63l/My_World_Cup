@@ -52,7 +52,7 @@ export function TeamSelect({
   }, []);
 
   return (
-    <div ref={containerRef} className="relative w-full max-w-[260px]">
+    <div ref={containerRef} className="relative flex-1 min-w-0" style={{ maxWidth: 320 }}>
       {/* Trigger */}
       <button
         type="button"
@@ -78,7 +78,7 @@ export function TeamSelect({
 
       {/* Dropdown */}
       {isOpen && (
-        <div className="absolute z-50 mt-1 w-full bg-white rounded-lg border border-[#e2e8f0] shadow-lg max-h-[280px] overflow-hidden">
+        <div className="absolute z-50 mt-1 min-w-[280px] w-full bg-white rounded-lg border border-[#e2e8f0] shadow-lg max-h-[280px] overflow-hidden">
           {/* Search */}
           <div className="p-2 border-b border-[#eef0f3]">
             <input
@@ -109,8 +109,8 @@ export function TeamSelect({
                     team.team_name_en === value ? "bg-[#3182ce]/5 text-[#3182ce]" : "text-[#1a1a2e]"
                   }`}
                 >
-                  <span className="font-medium">{team.team_name}</span>
-                  <span className="text-[10px] text-gray-400 uppercase">{team.confederation}</span>
+                  <span className="font-medium truncate">{team.team_name}</span>
+                  <span className="text-[10px] text-gray-400 uppercase whitespace-nowrap ml-2">{team.confederation}</span>
                 </button>
               ))
             )}
