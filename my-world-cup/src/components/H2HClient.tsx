@@ -60,7 +60,7 @@ export function H2HClient({ data }: H2HClientProps) {
   }
 
   return (
-    <div className="px-5 py-4 max-w-4xl mx-auto">
+    <div className="px-6 py-4 max-w-7xl mx-auto">
       {/* Step 1: Team selection */}
       <div className="mb-6">
         <h1 className="text-lg font-bold text-[#1a1a2e] mb-1">对阵模拟</h1>
