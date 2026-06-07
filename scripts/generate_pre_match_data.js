@@ -37,7 +37,19 @@ function getTeamNames() {
         }
     }
 
-    return { teamNames, teamCodes };
+    // Build Chinese name map from profiles
+    const chineseNames = {};
+    for (const dirName of teamNames) {
+        const profileFile = path.join(databasePath, dirName, "profile.json");
+        if (fs.existsSync(profileFile)) {
+            const profile = JSON.parse(fs.readFileSync(profileFile, 'utf8'));
+            chineseNames[dirName] = profile.team_name;
+        } else {
+            chineseNames[dirName] = dirName;
+        }
+    }
+
+    return { teamNames, teamCodes, chineseNames };
 }
 
 function getTeamOverallScore(teamName) {
@@ -159,7 +171,7 @@ function generateStrategy(teamId, overallScore, baseFormation) {
     };
 }
 
-function generateRecentForm(teamId, overallScore, allTeamNames, teamNameDir) {
+function generateRecentForm(teamId, overallScore, allTeamNames, teamNameDir, chineseNames) {
     // Determine W/D/L distribution based on overall score
     let wins, draws, losses;
 
@@ -181,21 +193,28 @@ function generateRecentForm(teamId, overallScore, allTeamNames, teamNameDir) {
 
     // Create result list
     const results = [];
-    // Create opponents list from all team names, excluding current team
-    const opponents = allTeamNames.filter(name => name !== teamNameDir);
+    // Create opponents list from all team Chinese names, excluding current team
+    const opponents = allTeamNames
+        .filter(name => name !== teamNameDir)
+        .map(name => chineseNames[name] || name);
 
     const resultTypes = [];
     for (let i = 0; i < wins; i++) resultTypes.push('W');
     for (let i = 0; i < draws; i++) resultTypes.push('D');
     for (let i = 0; i < losses; i++) resultTypes.push('L');
 
-    // Make sure we have exactly 10 results
-    while (resultTypes.length < 10) {
-        resultTypes.push('L');
+    // Ensure exactly 10 results by capping wins+draws
+    if (wins + draws > 10) {
+        draws = 10 - wins;
+        if (draws < 0) { draws = 0; wins = 10; }
     }
-    while (resultTypes.length > 10) {
-        resultTypes.pop();
-    }
+    losses = Math.max(0, 10 - wins - draws);
+
+    // Rebuild resultTypes with corrected counts
+    resultTypes.length = 0;
+    for (let i = 0; i < wins; i++) resultTypes.push('W');
+    for (let i = 0; i < draws; i++) resultTypes.push('D');
+    for (let i = 0; i < losses; i++) resultTypes.push('L');
 
     // Shuffle results
     for (let i = resultTypes.length - 1; i > 0; i--) {
@@ -306,7 +325,7 @@ function main() {
 
     try {
         // Get team names
-        const { teamNames, teamCodes } = getTeamNames();
+        const { teamNames, teamCodes, chineseNames } = getTeamNames();
         console.log(`Found ${teamCodes.length} teams: ${teamCodes.join(', ')}`);
 
         // Generate strategy.json and recent_form.json for each team
@@ -350,7 +369,7 @@ function main() {
             fs.writeFileSync(strategyFile, JSON.stringify(strategy, null, 2), 'utf8');
 
             // Generate recent form
-            const recentForm = generateRecentForm(teamId, overallScore, teamNames, teamNameDir);
+            const recentForm = generateRecentForm(teamId, overallScore, teamNames, teamNameDir, chineseNames);
             const formFile = `my-world-cup/database/2_ability_models/${teamNameDir}/recent_form.json`;
 
             fs.writeFileSync(formFile, JSON.stringify(recentForm, null, 2), 'utf8');
