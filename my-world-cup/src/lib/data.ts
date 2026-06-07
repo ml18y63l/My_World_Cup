@@ -3,6 +3,7 @@
 import fs from "fs";
 import path from "path";
 import type { TeamProfile, RadarMetrics, TeamOverall, OddsEntry, GroupData } from "@/types/team";
+import type { H2HPageData } from "@/types/simulation";
 import { GROUP_COLORS } from "@/types/team";
 import { calculateOverallScore } from "./score";
 
@@ -87,4 +88,26 @@ export function formatValue(valueM: number): string {
     return `€${(valueM / 1000).toFixed(1)}B`;
   }
   return `€${valueM}M`;
+}
+
+/**
+ * 获取所有球队的完整数据（profile + radar），用于对阵模拟页面
+ */
+export function getAllTeamsWithRadar(): H2HPageData {
+  const profiles = getAllTeamProfiles();
+  const teams = profiles.map((profile) => {
+    const radar = getRadarData(profile.team_name_en);
+    const overall_score = radar ? calculateOverallScore(radar) : 0;
+    return { ...profile, overall_score };
+  });
+
+  const radarMap: Record<string, RadarMetrics> = {};
+  for (const profile of profiles) {
+    const radar = getRadarData(profile.team_name_en);
+    if (radar) {
+      radarMap[profile.team_name_en] = radar;
+    }
+  }
+
+  return { teams, radarMap };
 }
