@@ -2,7 +2,7 @@
 
 import fs from "fs";
 import path from "path";
-import type { TeamProfile, RadarMetrics, TeamOverall, OddsEntry, GroupData } from "@/types/team";
+import type { TeamProfile, RadarMetrics, TeamOverall, OddsEntry, GroupData, StrategyData, RecentFormData } from "@/types/team";
 import type { H2HPageData } from "@/types/simulation";
 import { GROUP_COLORS } from "@/types/team";
 import { calculateOverallScore } from "./score";
@@ -81,6 +81,64 @@ export function getOddsData(): OddsEntry[] {
 }
 
 /**
+ * 读取所有球队的 strategy.json，返回以 team_name_en 为键的 Map
+ */
+export function getStrategiesMap(): Record<string, StrategyData> {
+  const entries = fs.readdirSync(DB_DIR, { withFileTypes: true });
+  const map: Record<string, StrategyData> = {};
+
+  for (const entry of entries) {
+    if (!entry.isDirectory()) continue;
+    const filePath = path.join(DB_DIR, entry.name, "strategy.json");
+    if (fs.existsSync(filePath)) {
+      const data: StrategyData = JSON.parse(fs.readFileSync(filePath, "utf-8"));
+      const profilePath = path.join(DB_DIR, entry.name, "profile.json");
+      if (fs.existsSync(profilePath)) {
+        const profile: TeamProfile = JSON.parse(fs.readFileSync(profilePath, "utf-8"));
+        map[profile.team_name_en] = data;
+      }
+    }
+  }
+
+  return map;
+}
+
+/**
+ * 读取所有球队的 recent_form.json，返回以 team_name_en 为键的 Map
+ */
+export function getRecentFormsMap(): Record<string, RecentFormData> {
+  const entries = fs.readdirSync(DB_DIR, { withFileTypes: true });
+  const map: Record<string, RecentFormData> = {};
+
+  for (const entry of entries) {
+    if (!entry.isDirectory()) continue;
+    const filePath = path.join(DB_DIR, entry.name, "recent_form.json");
+    if (fs.existsSync(filePath)) {
+      const data: RecentFormData = JSON.parse(fs.readFileSync(filePath, "utf-8"));
+      const profilePath = path.join(DB_DIR, entry.name, "profile.json");
+      if (fs.existsSync(profilePath)) {
+        const profile: TeamProfile = JSON.parse(fs.readFileSync(profilePath, "utf-8"));
+        map[profile.team_name_en] = data;
+      }
+    }
+  }
+
+  return map;
+}
+
+/**
+ * 读取赔率数据，返回以 team_name_en 为键的 Map
+ */
+export function getOddsMap(): Record<string, OddsEntry> {
+  const oddsList = getOddsData();
+  const map: Record<string, OddsEntry> = {};
+  for (const entry of oddsList) {
+    map[entry.team_name_en] = entry;
+  }
+  return map;
+}
+
+/**
  * 格式化身价值
  */
 export function formatValue(valueM: number): string {
@@ -109,5 +167,9 @@ export function getAllTeamsWithRadar(): H2HPageData {
     }
   }
 
-  return { teams, radarMap };
+  const strategyMap = getStrategiesMap();
+  const formMap = getRecentFormsMap();
+  const oddsMap = getOddsMap();
+
+  return { teams, radarMap, strategyMap, formMap, oddsMap };
 }
