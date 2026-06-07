@@ -4,335 +4,479 @@
     "team_name": "阿根廷",
     "team_name_en": "Argentina",
     "country_code": "ar",
-    "odds": 4
+    "odds": 4,
+    "win_odds_base": 1.5,
+    "draw_odds_base": 3.46,
+    "loss_odds_base": 7.2
   },
   {
     "team_id": "FRA",
     "team_name": "法国",
     "team_name_en": "France",
     "country_code": "fr",
-    "odds": 12.04
+    "odds": 12.04,
+    "win_odds_base": 1.58,
+    "draw_odds_base": 3.45,
+    "loss_odds_base": 7.14
   },
   {
     "team_id": "GER",
     "team_name": "德国",
     "team_name_en": "Germany",
     "country_code": "de",
-    "odds": 20.08
+    "odds": 20.08,
+    "win_odds_base": 1.66,
+    "draw_odds_base": 3.44,
+    "loss_odds_base": 7.07
   },
   {
     "team_id": "ENG",
     "team_name": "英格兰",
     "team_name_en": "England",
     "country_code": "gb-eng",
-    "odds": 28.12
+    "odds": 28.12,
+    "win_odds_base": 1.74,
+    "draw_odds_base": 3.43,
+    "loss_odds_base": 7.01
   },
   {
     "team_id": "BRA",
     "team_name": "巴西",
     "team_name_en": "Brazil",
     "country_code": "br",
-    "odds": 36.16
+    "odds": 36.16,
+    "win_odds_base": 1.82,
+    "draw_odds_base": 3.42,
+    "loss_odds_base": 6.94
   },
   {
     "team_id": "POR",
     "team_name": "葡萄牙",
     "team_name_en": "Portugal",
     "country_code": "pt",
-    "odds": 44.2
+    "odds": 44.2,
+    "win_odds_base": 1.9,
+    "draw_odds_base": 3.41,
+    "loss_odds_base": 6.88
   },
   {
     "team_id": "NED",
     "team_name": "荷兰",
     "team_name_en": "Netherlands",
     "country_code": "nl",
-    "odds": 52.24
+    "odds": 52.24,
+    "win_odds_base": 1.98,
+    "draw_odds_base": 3.41,
+    "loss_odds_base": 6.82
   },
   {
     "team_id": "ESP",
     "team_name": "西班牙",
     "team_name_en": "Spain",
     "country_code": "es",
-    "odds": 60.28
+    "odds": 60.28,
+    "win_odds_base": 2.06,
+    "draw_odds_base": 3.4,
+    "loss_odds_base": 6.75
   },
   {
     "team_id": "ITA",
     "team_name": "意大利",
     "team_name_en": "Italy",
     "country_code": "it",
-    "odds": 68.32
+    "odds": 68.32,
+    "win_odds_base": 2.14,
+    "draw_odds_base": 3.39,
+    "loss_odds_base": 6.69
   },
   {
     "team_id": "CRO",
     "team_name": "克罗地亚",
     "team_name_en": "Croatia",
     "country_code": "hr",
-    "odds": 76.36
+    "odds": 76.36,
+    "win_odds_base": 2.22,
+    "draw_odds_base": 3.38,
+    "loss_odds_base": 6.63
   },
   {
     "team_id": "BEL",
     "team_name": "比利时",
     "team_name_en": "Belgium",
     "country_code": "be",
-    "odds": 84.4
+    "odds": 84.4,
+    "win_odds_base": 2.3,
+    "draw_odds_base": 3.37,
+    "loss_odds_base": 6.56
   },
   {
     "team_id": "COL",
     "team_name": "哥伦比亚",
     "team_name_en": "Colombia",
     "country_code": "co",
-    "odds": 92.44
+    "odds": 92.44,
+    "win_odds_base": 2.38,
+    "draw_odds_base": 3.36,
+    "loss_odds_base": 6.5
   },
   {
     "team_id": "USA",
     "team_name": "美国",
     "team_name_en": "United States",
     "country_code": "us",
-    "odds": 100.48
+    "odds": 100.48,
+    "win_odds_base": 2.46,
+    "draw_odds_base": 3.35,
+    "loss_odds_base": 6.43
   },
   {
     "team_id": "MAR",
     "team_name": "摩洛哥",
     "team_name_en": "Morocco",
     "country_code": "ma",
-    "odds": 100.48
+    "odds": 100.48,
+    "win_odds_base": 2.46,
+    "draw_odds_base": 3.35,
+    "loss_odds_base": 6.43
   },
   {
     "team_id": "URU",
     "team_name": "乌拉圭",
     "team_name_en": "Uruguay",
     "country_code": "uy",
-    "odds": 108.53
+    "odds": 108.53,
+    "win_odds_base": 2.54,
+    "draw_odds_base": 3.35,
+    "loss_odds_base": 6.37
   },
   {
     "team_id": "MEX",
     "team_name": "墨西哥",
     "team_name_en": "Mexico",
     "country_code": "mx",
-    "odds": 116.57
+    "odds": 116.57,
+    "win_odds_base": 2.62,
+    "draw_odds_base": 3.34,
+    "loss_odds_base": 6.31
   },
   {
     "team_id": "SUI",
     "team_name": "瑞士",
     "team_name_en": "Switzerland",
     "country_code": "ch",
-    "odds": 124.61
+    "odds": 124.61,
+    "win_odds_base": 2.7,
+    "draw_odds_base": 3.33,
+    "loss_odds_base": 6.24
   },
   {
     "team_id": "JPN",
     "team_name": "日本",
     "team_name_en": "Japan",
     "country_code": "jp",
-    "odds": 140.69
+    "odds": 140.69,
+    "win_odds_base": 2.86,
+    "draw_odds_base": 3.31,
+    "loss_odds_base": 6.11
   },
   {
     "team_id": "SEN",
     "team_name": "塞内加尔",
     "team_name_en": "Senegal",
     "country_code": "sn",
-    "odds": 156.77
+    "odds": 156.77,
+    "win_odds_base": 3.02,
+    "draw_odds_base": 3.3,
+    "loss_odds_base": 5.99
   },
   {
     "team_id": "DEN",
     "team_name": "丹麦",
     "team_name_en": "Denmark",
     "country_code": "dk",
-    "odds": 164.81
+    "odds": 164.81,
+    "win_odds_base": 3.1,
+    "draw_odds_base": 3.29,
+    "loss_odds_base": 5.92
   },
   {
     "team_id": "AUT",
     "team_name": "奥地利",
     "team_name_en": "Austria",
     "country_code": "at",
-    "odds": 172.85
+    "odds": 172.85,
+    "win_odds_base": 3.18,
+    "draw_odds_base": 3.28,
+    "loss_odds_base": 5.86
   },
   {
     "team_id": "KOR",
     "team_name": "韩国",
     "team_name_en": "South Korea",
     "country_code": "kr",
-    "odds": 180.89
+    "odds": 180.89,
+    "win_odds_base": 3.26,
+    "draw_odds_base": 3.27,
+    "loss_odds_base": 5.8
   },
   {
     "team_id": "UKR",
     "team_name": "乌克兰",
     "team_name_en": "Ukraine",
     "country_code": "ua",
-    "odds": 188.93
+    "odds": 188.93,
+    "win_odds_base": 3.34,
+    "draw_odds_base": 3.26,
+    "loss_odds_base": 5.73
   },
   {
     "team_id": "IRN",
     "team_name": "伊朗",
     "team_name_en": "Iran",
     "country_code": "ir",
-    "odds": 196.97
+    "odds": 196.97,
+    "win_odds_base": 3.41,
+    "draw_odds_base": 3.25,
+    "loss_odds_base": 5.67
   },
   {
     "team_id": "SWE",
     "team_name": "瑞典",
     "team_name_en": "Sweden",
     "country_code": "se",
-    "odds": 205.01
+    "odds": 205.01,
+    "win_odds_base": 3.49,
+    "draw_odds_base": 3.24,
+    "loss_odds_base": 5.6
   },
   {
     "team_id": "TUR",
     "team_name": "土耳其",
     "team_name_en": "Turkey",
     "country_code": "tr",
-    "odds": 213.05
+    "odds": 213.05,
+    "win_odds_base": 3.57,
+    "draw_odds_base": 3.24,
+    "loss_odds_base": 5.54
   },
   {
     "team_id": "POL",
     "team_name": "波兰",
     "team_name_en": "Poland",
     "country_code": "pl",
-    "odds": 221.09
+    "odds": 221.09,
+    "win_odds_base": 3.65,
+    "draw_odds_base": 3.23,
+    "loss_odds_base": 5.48
   },
   {
     "team_id": "WAL",
     "team_name": "威尔士",
     "team_name_en": "Wales",
     "country_code": "gb-wls",
-    "odds": 229.13
+    "odds": 229.13,
+    "win_odds_base": 3.73,
+    "draw_odds_base": 3.22,
+    "loss_odds_base": 5.41
   },
   {
     "team_id": "CAN",
     "team_name": "加拿大",
     "team_name_en": "Canada",
     "country_code": "ca",
-    "odds": 237.17
+    "odds": 237.17,
+    "win_odds_base": 3.81,
+    "draw_odds_base": 3.21,
+    "loss_odds_base": 5.35
   },
   {
     "team_id": "HUN",
     "team_name": "匈牙利",
     "team_name_en": "Hungary",
     "country_code": "hu",
-    "odds": 245.21
+    "odds": 245.21,
+    "win_odds_base": 3.89,
+    "draw_odds_base": 3.2,
+    "loss_odds_base": 5.29
   },
   {
     "team_id": "ECU",
     "team_name": "厄瓜多尔",
     "team_name_en": "Ecuador",
     "country_code": "ec",
-    "odds": 253.25
+    "odds": 253.25,
+    "win_odds_base": 3.97,
+    "draw_odds_base": 3.19,
+    "loss_odds_base": 5.22
   },
   {
     "team_id": "SRB",
     "team_name": "塞尔维亚",
     "team_name_en": "Serbia",
     "country_code": "rs",
-    "odds": 261.29
+    "odds": 261.29,
+    "win_odds_base": 4.05,
+    "draw_odds_base": 3.18,
+    "loss_odds_base": 5.16
   },
   {
     "team_id": "CZE",
     "team_name": "捷克",
     "team_name_en": "Czech Republic",
     "country_code": "cz",
-    "odds": 269.33
+    "odds": 269.33,
+    "win_odds_base": 4.13,
+    "draw_odds_base": 3.18,
+    "loss_odds_base": 5.09
   },
   {
     "team_id": "TUN",
     "team_name": "突尼斯",
     "team_name_en": "Tunisia",
     "country_code": "tn",
-    "odds": 277.37
+    "odds": 277.37,
+    "win_odds_base": 4.21,
+    "draw_odds_base": 3.17,
+    "loss_odds_base": 5.03
   },
   {
     "team_id": "NGA",
     "team_name": "尼日利亚",
     "team_name_en": "Nigeria",
     "country_code": "ng",
-    "odds": 285.41
+    "odds": 285.41,
+    "win_odds_base": 4.29,
+    "draw_odds_base": 3.16,
+    "loss_odds_base": 4.97
   },
   {
     "team_id": "PER",
     "team_name": "秘鲁",
     "team_name_en": "Peru",
     "country_code": "pe",
-    "odds": 301.49
+    "odds": 301.49,
+    "win_odds_base": 4.45,
+    "draw_odds_base": 3.14,
+    "loss_odds_base": 4.84
   },
   {
     "team_id": "SCO",
     "team_name": "苏格兰",
     "team_name_en": "Scotland",
     "country_code": "gb-sct",
-    "odds": 309.54
+    "odds": 309.54,
+    "win_odds_base": 4.53,
+    "draw_odds_base": 3.13,
+    "loss_odds_base": 4.77
   },
   {
     "team_id": "AUS",
     "team_name": "澳大利亚",
     "team_name_en": "Australia",
     "country_code": "au",
-    "odds": 317.58
+    "odds": 317.58,
+    "win_odds_base": 4.61,
+    "draw_odds_base": 3.12,
+    "loss_odds_base": 4.71
   },
   {
     "team_id": "GHA",
     "team_name": "加纳",
     "team_name_en": "Ghana",
     "country_code": "gh",
-    "odds": 333.66
+    "odds": 333.66,
+    "win_odds_base": 4.77,
+    "draw_odds_base": 3.11,
+    "loss_odds_base": 4.58
   },
   {
     "team_id": "CMR",
     "team_name": "喀麦隆",
     "team_name_en": "Cameroon",
     "country_code": "cm",
-    "odds": 357.78
+    "odds": 357.78,
+    "win_odds_base": 5.01,
+    "draw_odds_base": 3.08,
+    "loss_odds_base": 4.39
   },
   {
     "team_id": "CRC",
     "team_name": "哥斯达黎加",
     "team_name_en": "Costa Rica",
     "country_code": "cr",
-    "odds": 365.82
+    "odds": 365.82,
+    "win_odds_base": 5.09,
+    "draw_odds_base": 3.07,
+    "loss_odds_base": 4.33
   },
   {
     "team_id": "KSA",
     "team_name": "沙特",
     "team_name_en": "Saudi Arabia",
     "country_code": "sa",
-    "odds": 381.9
+    "odds": 381.9,
+    "win_odds_base": 5.25,
+    "draw_odds_base": 3.06,
+    "loss_odds_base": 4.2
   },
   {
     "team_id": "CHI",
     "team_name": "智利",
     "team_name_en": "Chile",
     "country_code": "cl",
-    "odds": 397.98
+    "odds": 397.98,
+    "win_odds_base": 5.41,
+    "draw_odds_base": 3.07,
+    "loss_odds_base": 4.07
   },
   {
     "team_id": "PRY",
     "team_name": "巴拉圭",
     "team_name_en": "Paraguay",
     "country_code": "py",
-    "odds": 414.06
+    "odds": 414.06,
+    "win_odds_base": 5.57,
+    "draw_odds_base": 3.09,
+    "loss_odds_base": 3.94
   },
   {
     "team_id": "QAT",
     "team_name": "卡塔尔",
     "team_name_en": "Qatar",
     "country_code": "qa",
-    "odds": 438.18
+    "odds": 438.18,
+    "win_odds_base": 5.81,
+    "draw_odds_base": 3.12,
+    "loss_odds_base": 3.75
   },
   {
     "team_id": "RSA",
     "team_name": "南非",
     "team_name_en": "South Africa",
     "country_code": "za",
-    "odds": 478.38
+    "odds": 478.38,
+    "win_odds_base": 6.21,
+    "draw_odds_base": 3.16,
+    "loss_odds_base": 3.43
   },
   {
     "team_id": "CHN",
     "team_name": "中国",
     "team_name_en": "China",
     "country_code": "cn",
-    "odds": 639.19
+    "odds": 639.19,
+    "win_odds_base": 7.8,
+    "draw_odds_base": 3.33,
+    "loss_odds_base": 2.16
   },
   {
     "team_id": "NZL",
     "team_name": "新西兰",
     "team_name_en": "New Zealand",
     "country_code": "nz",
-    "odds": 759.8
+    "odds": 759.8,
+    "win_odds_base": 9,
+    "draw_odds_base": 3.46,
+    "loss_odds_base": 1.2
   }
 ]

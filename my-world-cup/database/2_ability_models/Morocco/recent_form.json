@@ -1,0 +1,72 @@
+{
+  "team_id": "MOR",
+  "last_10": [
+    {
+      "opponent": "黎巴嫩",
+      "result": "W",
+      "score": "4-1",
+      "type": "friendly"
+    },
+    {
+      "opponent": "约旦",
+      "result": "W",
+      "score": "4-1",
+      "type": "friendly"
+    },
+    {
+      "opponent": "巴勒斯坦",
+      "result": "W",
+      "score": "4-1",
+      "type": "friendly"
+    },
+    {
+      "opponent": "阿联酋",
+      "result": "D",
+      "score": "2-2",
+      "type": "friendly"
+    },
+    {
+      "opponent": "伊拉克",
+      "result": "W",
+      "score": "4-1",
+      "type": "friendly"
+    },
+    {
+      "opponent": "伊朗",
+      "result": "W",
+      "score": "4-1",
+      "type": "friendly"
+    },
+    {
+      "opponent": "叙利亚",
+      "result": "W",
+      "score": "4-1",
+      "type": "friendly"
+    },
+    {
+      "opponent": "沙特",
+      "result": "W",
+      "score": "4-1",
+      "type": "friendly"
+    },
+    {
+      "opponent": "埃及",
+      "result": "D",
+      "score": "2-2",
+      "type": "friendly"
+    },
+    {
+      "opponent": "突尼斯",
+      "result": "D",
+      "score": "2-2",
+      "type": "friendly"
+    }
+  ],
+  "summary": {
+    "wins": 7,
+    "draws": 3,
+    "losses": 0,
+    "goals_scored": 34,
+    "goals_conceded": 13
+  }
+}
