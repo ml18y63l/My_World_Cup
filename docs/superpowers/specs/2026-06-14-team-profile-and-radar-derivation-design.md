@@ -28,9 +28,9 @@
 
 ## 3. 页面与路由
 
-- 新增动态路由 `/team/[teamNameEn]`（如 `/team/Brazil`）。48 队均可访问。
+- 新增动态路由 `/team/[teamId]`（如 `/team/BRA`，param=team_id，复用首页 `TeamRow` 已有链接）。48 队均可访问。
 - **巴西**：完整画像。**其它队**：优雅降级——显示 profile + 雷达 + 战绩，名单区块显示"暂无大名单数据"或隐藏。
-- 入口：首页球队列表点击队名 → `/team/[teamNameEn]`。
+- 入口：首页球队列表点击队名 → `/team/[teamId]`（`TeamRow` 已实现，无需改动）。
 - 视觉：复用 `/h2h` 语言（深色底 `#1a1a2e`、红/金强调、手写 SVG 雷达）。
 
 **页面区块：**
@@ -101,7 +101,7 @@
 ## 8. 文件清单
 
 **新增：**
-- `src/app/team/[teamNameEn]/page.tsx`（服务端组件，取数）
+- `src/app/team/[teamId]/page.tsx`（服务端组件，取数）
 - `src/components/TeamProfileClient.tsx`（客户端：名单筛选等交互）
 - `src/components/SingleRadarChart.tsx`（单队雷达，可由 `RadarCompareChart` 改写）
 - `src/components/SquadTable.tsx`、`src/components/RecentFormList.tsx`
