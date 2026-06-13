@@ -1,0 +1,72 @@
+{
+  "team_id": "Verde",
+  "last_10": [
+    {
+      "opponent": "塞内加尔",
+      "result": "W",
+      "score": "4-1",
+      "type": "friendly"
+    },
+    {
+      "opponent": "南非",
+      "result": "W",
+      "score": "4-1",
+      "type": "friendly"
+    },
+    {
+      "opponent": "苏格兰",
+      "result": "W",
+      "score": "4-1",
+      "type": "friendly"
+    },
+    {
+      "opponent": "沙特",
+      "result": "L",
+      "score": "2-3",
+      "type": "friendly"
+    },
+    {
+      "opponent": "卡塔尔",
+      "result": "D",
+      "score": "2-2",
+      "type": "friendly"
+    },
+    {
+      "opponent": "葡萄牙",
+      "result": "D",
+      "score": "2-2",
+      "type": "friendly"
+    },
+    {
+      "opponent": "韩国",
+      "result": "D",
+      "score": "2-2",
+      "type": "friendly"
+    },
+    {
+      "opponent": "巴拉圭",
+      "result": "D",
+      "score": "2-2",
+      "type": "friendly"
+    },
+    {
+      "opponent": "巴拿马",
+      "result": "L",
+      "score": "2-3",
+      "type": "friendly"
+    },
+    {
+      "opponent": "挪威",
+      "result": "L",
+      "score": "2-3",
+      "type": "friendly"
+    }
+  ],
+  "summary": {
+    "wins": 3,
+    "draws": 4,
+    "losses": 3,
+    "goals_scored": 26,
+    "goals_conceded": 20
+  }
+}

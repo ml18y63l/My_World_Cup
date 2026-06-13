@@ -2,27 +2,15 @@
   "team_id": "ECU",
   "last_10": [
     {
+      "opponent": "塞内加尔",
+      "result": "W",
+      "score": "4-1",
+      "type": "friendly"
+    },
+    {
       "opponent": "南非",
       "result": "W",
       "score": "4-1",
-      "type": "friendly"
-    },
-    {
-      "opponent": "韩国",
-      "result": "W",
-      "score": "4-1",
-      "type": "friendly"
-    },
-    {
-      "opponent": "塞尔维亚",
-      "result": "W",
-      "score": "4-1",
-      "type": "friendly"
-    },
-    {
-      "opponent": "塞内加尔",
-      "result": "D",
-      "score": "2-2",
       "type": "friendly"
     },
     {
@@ -33,30 +21,42 @@
     },
     {
       "opponent": "沙特",
-      "result": "W",
-      "score": "4-1",
-      "type": "friendly"
-    },
-    {
-      "opponent": "西班牙",
       "result": "D",
       "score": "2-2",
       "type": "friendly"
     },
     {
       "opponent": "卡塔尔",
+      "result": "W",
+      "score": "4-1",
+      "type": "friendly"
+    },
+    {
+      "opponent": "葡萄牙",
+      "result": "W",
+      "score": "4-1",
+      "type": "friendly"
+    },
+    {
+      "opponent": "韩国",
       "result": "D",
       "score": "2-2",
       "type": "friendly"
     },
     {
-      "opponent": "葡萄牙",
+      "opponent": "巴拉圭",
+      "result": "D",
+      "score": "2-2",
+      "type": "friendly"
+    },
+    {
+      "opponent": "巴拿马",
       "result": "L",
       "score": "2-3",
       "type": "friendly"
     },
     {
-      "opponent": "波兰",
+      "opponent": "挪威",
       "result": "D",
       "score": "2-2",
       "type": "friendly"

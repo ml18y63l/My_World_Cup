@@ -2,13 +2,7 @@
   "team_id": "SWE",
   "last_10": [
     {
-      "opponent": "塞尔维亚",
-      "result": "W",
-      "score": "4-1",
-      "type": "friendly"
-    },
-    {
-      "opponent": "南非",
+      "opponent": "苏格兰",
       "result": "W",
       "score": "4-1",
       "type": "friendly"
@@ -20,12 +14,6 @@
       "type": "friendly"
     },
     {
-      "opponent": "苏格兰",
-      "result": "D",
-      "score": "2-2",
-      "type": "friendly"
-    },
-    {
       "opponent": "沙特",
       "result": "W",
       "score": "4-1",
@@ -33,30 +21,42 @@
     },
     {
       "opponent": "卡塔尔",
-      "result": "W",
-      "score": "4-1",
-      "type": "friendly"
-    },
-    {
-      "opponent": "韩国",
       "result": "D",
       "score": "2-2",
       "type": "friendly"
     },
     {
       "opponent": "葡萄牙",
+      "result": "W",
+      "score": "4-1",
+      "type": "friendly"
+    },
+    {
+      "opponent": "巴拉圭",
+      "result": "W",
+      "score": "4-1",
+      "type": "friendly"
+    },
+    {
+      "opponent": "南非",
       "result": "D",
       "score": "2-2",
       "type": "friendly"
     },
     {
-      "opponent": "波兰",
+      "opponent": "巴拿马",
+      "result": "D",
+      "score": "2-2",
+      "type": "friendly"
+    },
+    {
+      "opponent": "挪威",
       "result": "L",
       "score": "2-3",
       "type": "friendly"
     },
     {
-      "opponent": "秘鲁",
+      "opponent": "新西兰",
       "result": "D",
       "score": "2-2",
       "type": "friendly"
