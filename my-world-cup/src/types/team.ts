@@ -11,6 +11,7 @@ export interface TeamProfile {
   base_formation: string;
   country_code: string;
   group: string;
+  qualification?: string;
 }
 
 export interface RadarMetrics {
@@ -57,6 +58,7 @@ export interface StrategyData {
 }
 
 export interface MatchRecord {
+  date?: string;
   opponent: string;
   result: "W" | "D" | "L";
   score: string;
@@ -95,6 +97,36 @@ export const GROUP_COLORS: Record<string, string> = {
   K: "#805ad5",
   L: "#ed8936",
 };
+
+export interface SquadPlayer {
+  number: number;
+  position: "GK" | "DF" | "MF" | "FW";
+  name_cn: string;
+  name_en: string;
+  birth_date?: string;
+  age?: number;
+  caps: number;
+  goals: number;
+  assists: number | null;
+  club_cn: string;
+  club_en: string;
+  value_wan_euros: number;
+  preferred_position: string;
+  injury_note?: string;
+}
+
+export interface SquadData {
+  team_id: string;
+  players: SquadPlayer[];
+}
+
+export interface TeamPageData {
+  profile: TeamProfile;
+  radar: RadarMetrics | null;
+  squad: SquadData | null;
+  form: RecentFormData | null;
+  overall_score: number;
+}
 
 export const BAR_GRADIENTS = [
   "linear-gradient(90deg, #e53e3e, #fc8181)",
