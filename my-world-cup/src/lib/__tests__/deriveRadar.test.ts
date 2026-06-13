@@ -1,4 +1,6 @@
 import { describe, it, expect } from "vitest";
+import fs from "fs";
+import path from "path";
 import { deriveRadar } from "../deriveRadar";
 import type { SquadData, RecentFormData } from "@/types/team";
 
@@ -105,5 +107,15 @@ describe("deriveRadar - 边界", () => {
   it("空名单不抛错，返回钳制范围内的整数", () => {
     const r = deriveRadar({ team_id: "X", players: [] }, brazilForm);
     expect(Object.values(r).every((v) => Number.isInteger(v) && v >= 35 && v <= 95)).toBe(true);
+  });
+});
+
+describe("deriveRadar - 真实巴西文件一致性", () => {
+  it("deriveRadar(真实 squad+form) === 已发布的 radar_data.json", () => {
+    const base = path.join(process.cwd(), "database", "2_ability_models", "Brazil");
+    const squad = JSON.parse(fs.readFileSync(path.join(base, "squad.json"), "utf-8"));
+    const form = JSON.parse(fs.readFileSync(path.join(base, "recent_form.json"), "utf-8"));
+    const published = JSON.parse(fs.readFileSync(path.join(base, "radar_data.json"), "utf-8"));
+    expect(deriveRadar(squad, form)).toEqual(published);
   });
 });
