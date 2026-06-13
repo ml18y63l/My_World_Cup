@@ -110,12 +110,22 @@ describe("deriveRadar - 边界", () => {
   });
 });
 
-describe("deriveRadar - 真实巴西文件一致性", () => {
-  it("deriveRadar(真实 squad+form) === 已发布的 radar_data.json", () => {
-    const base = path.join(process.cwd(), "database", "2_ability_models", "Brazil");
-    const squad = JSON.parse(fs.readFileSync(path.join(base, "squad.json"), "utf-8"));
-    const form = JSON.parse(fs.readFileSync(path.join(base, "recent_form.json"), "utf-8"));
-    const published = JSON.parse(fs.readFileSync(path.join(base, "radar_data.json"), "utf-8"));
-    expect(deriveRadar(squad, form)).toEqual(published);
-  });
+describe("deriveRadar - 真实文件一致性（所有有大名单的球队）", () => {
+  // 扫描 database 下所有含 squad.json 的球队，断言 deriveRadar === 已发布 radar_data.json
+  const teamsDir = path.join(process.cwd(), "database", "2_ability_models");
+  const teams = fs
+    .readdirSync(teamsDir, { withFileTypes: true })
+    .filter((e) => e.isDirectory())
+    .map((e) => e.name)
+    .filter((name) => fs.existsSync(path.join(teamsDir, name, "squad.json")));
+
+  for (const team of teams) {
+    it(`${team}: deriveRadar(真实 squad+form) === 已发布 radar_data.json`, () => {
+      const base = path.join(teamsDir, team);
+      const squad = JSON.parse(fs.readFileSync(path.join(base, "squad.json"), "utf-8"));
+      const form = JSON.parse(fs.readFileSync(path.join(base, "recent_form.json"), "utf-8"));
+      const published = JSON.parse(fs.readFileSync(path.join(base, "radar_data.json"), "utf-8"));
+      expect(deriveRadar(squad, form)).toEqual(published);
+    });
+  }
 });
