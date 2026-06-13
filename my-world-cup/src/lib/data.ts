@@ -2,7 +2,7 @@
 
 import fs from "fs";
 import path from "path";
-import type { TeamProfile, RadarMetrics, TeamOverall, OddsEntry, GroupData, StrategyData, RecentFormData } from "@/types/team";
+import type { TeamProfile, RadarMetrics, TeamOverall, OddsEntry, GroupData, StrategyData, RecentFormData, SquadData, TeamPageData } from "@/types/team";
 import type { H2HPageData } from "@/types/simulation";
 import { GROUP_COLORS } from "@/types/team";
 import { calculateOverallScore } from "./score";
@@ -172,4 +172,28 @@ export function getAllTeamsWithRadar(): H2HPageData {
   const oddsMap = getOddsMap();
 
   return { teams, radarMap, strategyMap, formMap, oddsMap };
+}
+
+/**
+ * 读取指定球队的 squad.json（按 team_name_en 目录）
+ */
+export function getSquad(teamNameEn: string): SquadData | null {
+  const filePath = path.join(DB_DIR, teamNameEn, "squad.json");
+  if (!fs.existsSync(filePath)) return null;
+  return JSON.parse(fs.readFileSync(filePath, "utf-8"));
+}
+
+/**
+ * 按 team_id 取整页数据（profile + radar + squad + form + overall）
+ */
+export function getTeamPageData(teamId: string): TeamPageData | null {
+  const profiles = getAllTeamProfiles();
+  const profile = profiles.find((p) => p.team_id === teamId);
+  if (!profile) return null;
+  const radar = getRadarData(profile.team_name_en);
+  const squad = getSquad(profile.team_name_en);
+  const formMap = getRecentFormsMap();
+  const form = formMap[profile.team_name_en] ?? null;
+  const overall_score = radar ? calculateOverallScore(radar) : 0;
+  return { profile, radar, squad, form, overall_score };
 }
