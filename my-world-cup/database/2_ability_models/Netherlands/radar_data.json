@@ -1,10 +1,10 @@
 {
-  "attack": 82,
-  "defense": 76,
-  "control": 85,
-  "status": 85,
-  "experience": 82,
+  "attack": 80,
+  "defense": 79,
+  "control": 79,
+  "status": 84,
+  "experience": 68,
   "place_kick": 80,
-  "superstar": 79,
-  "penalty": 79
+  "superstar": 86,
+  "penalty": 86
 }

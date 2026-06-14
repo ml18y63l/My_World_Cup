@@ -1,72 +1,17 @@
 {
-  "team_id": "NET",
+  "team_id": "NED",
   "last_10": [
-    {
-      "opponent": "塞内加尔",
-      "result": "W",
-      "score": "4-1",
-      "type": "friendly"
-    },
-    {
-      "opponent": "南非",
-      "result": "W",
-      "score": "4-1",
-      "type": "friendly"
-    },
-    {
-      "opponent": "苏格兰",
-      "result": "W",
-      "score": "4-1",
-      "type": "friendly"
-    },
-    {
-      "opponent": "沙特",
-      "result": "D",
-      "score": "2-2",
-      "type": "friendly"
-    },
-    {
-      "opponent": "卡塔尔",
-      "result": "W",
-      "score": "4-1",
-      "type": "friendly"
-    },
-    {
-      "opponent": "葡萄牙",
-      "result": "W",
-      "score": "4-1",
-      "type": "friendly"
-    },
-    {
-      "opponent": "韩国",
-      "result": "W",
-      "score": "4-1",
-      "type": "friendly"
-    },
-    {
-      "opponent": "巴拉圭",
-      "result": "W",
-      "score": "4-1",
-      "type": "friendly"
-    },
-    {
-      "opponent": "巴拿马",
-      "result": "D",
-      "score": "2-2",
-      "type": "friendly"
-    },
-    {
-      "opponent": "挪威",
-      "result": "D",
-      "score": "2-2",
-      "type": "friendly"
-    }
+    { "date": "2025-06-08", "opponent": "芬兰", "result": "W", "score": "2-0", "type": "qualifier" },
+    { "date": "2025-06-11", "opponent": "马耳他", "result": "W", "score": "8-0", "type": "qualifier" },
+    { "date": "2025-09-05", "opponent": "波兰", "result": "D", "score": "1-1", "type": "qualifier" },
+    { "date": "2025-10-10", "opponent": "马耳他", "result": "W", "score": "4-0", "type": "qualifier" },
+    { "date": "2025-10-13", "opponent": "芬兰", "result": "W", "score": "4-0", "type": "qualifier" },
+    { "date": "2025-11-15", "opponent": "波兰", "result": "D", "score": "1-1", "type": "qualifier" },
+    { "date": "2025-11-18", "opponent": "立陶宛", "result": "W", "score": "4-0", "type": "qualifier" },
+    { "date": "2026-03-28", "opponent": "挪威", "result": "W", "score": "2-1", "type": "friendly" },
+    { "date": "2026-04-01", "opponent": "厄瓜多尔", "result": "D", "score": "1-1", "type": "friendly" },
+    { "date": "2026-06-04", "opponent": "阿尔及利亚", "result": "L", "score": "0-1", "type": "friendly" },
+    { "date": "2026-06-09", "opponent": "乌兹别克斯坦", "result": "W", "score": "2-1", "type": "friendly" }
   ],
-  "summary": {
-    "wins": 7,
-    "draws": 3,
-    "losses": 0,
-    "goals_scored": 34,
-    "goals_conceded": 13
-  }
+  "summary": { "wins": 7, "draws": 3, "losses": 1, "goals_scored": 29, "goals_conceded": 6 }
 }
