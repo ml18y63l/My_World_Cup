@@ -3,10 +3,11 @@
   "team_name": "科特迪瓦",
   "team_name_en": "Ivory Coast",
   "confederation": "CAF",
-  "head_coach": "加塞特",
-  "total_value_m_euros": 320,
-  "fifa_ranking": 41,
+  "head_coach": "埃梅尔塞·法埃",
+  "total_value_m_euros": 522,
+  "fifa_ranking": 33,
   "base_formation": "4-3-3",
   "country_code": "ci",
-  "group": "E"
+  "group": "E",
+  "qualification": "CAF Group F winner"
 }
