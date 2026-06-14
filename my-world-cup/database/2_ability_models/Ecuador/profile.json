@@ -3,10 +3,11 @@
   "team_name": "厄瓜多尔",
   "team_name_en": "Ecuador",
   "confederation": "CONMEBOL",
-  "head_coach": "贝卡切切",
-  "total_value_m_euros": 150,
-  "fifa_ranking": 32,
+  "head_coach": "塞巴斯蒂安·贝卡塞塞",
+  "total_value_m_euros": 369,
+  "fifa_ranking": 23,
   "base_formation": "4-2-3-1",
   "country_code": "ec",
-  "group": "E"
+  "group": "E",
+  "qualification": "CONMEBOL round robin runner-up"
 }
