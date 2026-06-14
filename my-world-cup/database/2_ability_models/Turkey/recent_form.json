@@ -1,72 +1,18 @@
 {
   "team_id": "TUR",
   "last_10": [
-    {
-      "opponent": "苏格兰",
-      "result": "W",
-      "score": "4-1",
-      "type": "friendly"
-    },
-    {
-      "opponent": "塞内加尔",
-      "result": "W",
-      "score": "4-1",
-      "type": "friendly"
-    },
-    {
-      "opponent": "沙特",
-      "result": "W",
-      "score": "4-1",
-      "type": "friendly"
-    },
-    {
-      "opponent": "卡塔尔",
-      "result": "D",
-      "score": "2-2",
-      "type": "friendly"
-    },
-    {
-      "opponent": "葡萄牙",
-      "result": "W",
-      "score": "4-1",
-      "type": "friendly"
-    },
-    {
-      "opponent": "巴拉圭",
-      "result": "W",
-      "score": "4-1",
-      "type": "friendly"
-    },
-    {
-      "opponent": "南非",
-      "result": "D",
-      "score": "2-2",
-      "type": "friendly"
-    },
-    {
-      "opponent": "巴拿马",
-      "result": "D",
-      "score": "2-2",
-      "type": "friendly"
-    },
-    {
-      "opponent": "挪威",
-      "result": "L",
-      "score": "2-3",
-      "type": "friendly"
-    },
-    {
-      "opponent": "新西兰",
-      "result": "D",
-      "score": "2-2",
-      "type": "friendly"
-    }
+    { "date": "2025-03-20", "opponent": "匈牙利", "result": "W", "score": "3-1", "type": "tournament" },
+    { "date": "2025-03-23", "opponent": "匈牙利", "result": "W", "score": "3-0", "type": "tournament" },
+    { "date": "2025-06-07", "opponent": "美国", "result": "W", "score": "2-1", "type": "friendly" },
+    { "date": "2025-06-10", "opponent": "墨西哥", "result": "L", "score": "0-1", "type": "friendly" },
+    { "date": "2025-09-04", "opponent": "格鲁吉亚", "result": "W", "score": "3-2", "type": "qualifier" },
+    { "date": "2025-09-07", "opponent": "西班牙", "result": "L", "score": "0-6", "type": "qualifier" },
+    { "date": "2025-10-11", "opponent": "保加利亚", "result": "W", "score": "6-1", "type": "qualifier" },
+    { "date": "2025-10-14", "opponent": "格鲁吉亚", "result": "W", "score": "4-1", "type": "qualifier" },
+    { "date": "2025-11-15", "opponent": "保加利亚", "result": "W", "score": "2-0", "type": "qualifier" },
+    { "date": "2025-11-18", "opponent": "西班牙", "result": "D", "score": "2-2", "type": "qualifier" },
+    { "date": "2026-03-26", "opponent": "罗马尼亚", "result": "W", "score": "1-0", "type": "qualifier" },
+    { "date": "2026-03-31", "opponent": "科索沃", "result": "W", "score": "1-0", "type": "qualifier" }
   ],
-  "summary": {
-    "wins": 5,
-    "draws": 4,
-    "losses": 1,
-    "goals_scored": 30,
-    "goals_conceded": 16
-  }
+  "summary": { "wins": 9, "draws": 1, "losses": 2, "goals_scored": 27, "goals_conceded": 15 }
 }
