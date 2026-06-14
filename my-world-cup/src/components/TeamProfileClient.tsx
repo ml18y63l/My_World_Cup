@@ -49,7 +49,7 @@ export function TeamProfileClient({ data }: { data: TeamPageData }) {
           { label: "主教练", value: profile.head_coach },
           { label: "总身价", value: formatValue(profile.total_value_m_euros) },
           { label: "FIFA 排名", value: `#${profile.fifa_ranking}` },
-          { label: "阵型", value: profile.base_formation },
+          ...(profile.base_formation ? [{ label: "阵型", value: profile.base_formation }] : []),
         ].map((c) => (
           <div key={c.label} className="bg-white rounded-lg p-3 border border-[#eef0f3]">
             <div className="text-[10px] text-gray-400">{c.label}</div>

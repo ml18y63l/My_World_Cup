@@ -1,72 +1,16 @@
 {
   "team_id": "AUS",
   "last_10": [
-    {
-      "opponent": "塞内加尔",
-      "result": "W",
-      "score": "4-1",
-      "type": "friendly"
-    },
-    {
-      "opponent": "南非",
-      "result": "W",
-      "score": "4-1",
-      "type": "friendly"
-    },
-    {
-      "opponent": "苏格兰",
-      "result": "W",
-      "score": "4-1",
-      "type": "friendly"
-    },
-    {
-      "opponent": "沙特",
-      "result": "L",
-      "score": "2-3",
-      "type": "friendly"
-    },
-    {
-      "opponent": "卡塔尔",
-      "result": "D",
-      "score": "2-2",
-      "type": "friendly"
-    },
-    {
-      "opponent": "葡萄牙",
-      "result": "D",
-      "score": "2-2",
-      "type": "friendly"
-    },
-    {
-      "opponent": "韩国",
-      "result": "D",
-      "score": "2-2",
-      "type": "friendly"
-    },
-    {
-      "opponent": "巴拉圭",
-      "result": "D",
-      "score": "2-2",
-      "type": "friendly"
-    },
-    {
-      "opponent": "巴拿马",
-      "result": "L",
-      "score": "2-3",
-      "type": "friendly"
-    },
-    {
-      "opponent": "挪威",
-      "result": "L",
-      "score": "2-3",
-      "type": "friendly"
-    }
+    { "date": "2026-03-20", "opponent": "印度尼西亚", "result": "W", "score": "5-1", "type": "qualifier" },
+    { "date": "2026-03-21", "opponent": "黎巴嫩", "result": "W", "score": "2-0", "type": "qualifier" },
+    { "date": "2026-03-25", "opponent": "中国", "result": "W", "score": "2-0", "type": "qualifier" },
+    { "date": "2026-03-26", "opponent": "黎巴嫩", "result": "W", "score": "5-0", "type": "qualifier" },
+    { "date": "2026-03-27", "opponent": "喀麦隆", "result": "W", "score": "1-0", "type": "friendly" },
+    { "date": "2026-03-31", "opponent": "库拉索", "result": "W", "score": "5-1", "type": "friendly" },
+    { "date": "2026-06-05", "opponent": "日本", "result": "W", "score": "1-0", "type": "qualifier" },
+    { "date": "2026-06-06", "opponent": "孟加拉国", "result": "W", "score": "2-0", "type": "qualifier" },
+    { "date": "2026-06-10", "opponent": "沙特阿拉伯", "result": "W", "score": "2-1", "type": "qualifier" },
+    { "date": "2026-06-11", "opponent": "巴勒斯坦", "result": "W", "score": "5-0", "type": "qualifier" }
   ],
-  "summary": {
-    "wins": 3,
-    "draws": 4,
-    "losses": 3,
-    "goals_scored": 26,
-    "goals_conceded": 20
-  }
+  "summary": { "wins": 10, "draws": 0, "losses": 0, "goals_scored": 30, "goals_conceded": 3 }
 }

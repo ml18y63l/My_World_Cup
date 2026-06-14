@@ -8,7 +8,7 @@ export interface TeamProfile {
   head_coach: string;
   total_value_m_euros: number;
   fifa_ranking: number;
-  base_formation: string;
+  base_formation?: string;
   country_code: string;
   group: string;
   qualification?: string;
