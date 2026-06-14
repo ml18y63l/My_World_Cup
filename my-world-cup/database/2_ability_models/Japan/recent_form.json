@@ -1,72 +1,22 @@
 {
-  "team_id": "JAP",
+  "team_id": "JPN",
   "last_10": [
-    {
-      "opponent": "塞内加尔",
-      "result": "W",
-      "score": "4-1",
-      "type": "friendly"
-    },
-    {
-      "opponent": "南非",
-      "result": "W",
-      "score": "4-1",
-      "type": "friendly"
-    },
-    {
-      "opponent": "苏格兰",
-      "result": "W",
-      "score": "4-1",
-      "type": "friendly"
-    },
-    {
-      "opponent": "沙特",
-      "result": "D",
-      "score": "2-2",
-      "type": "friendly"
-    },
-    {
-      "opponent": "卡塔尔",
-      "result": "W",
-      "score": "4-1",
-      "type": "friendly"
-    },
-    {
-      "opponent": "葡萄牙",
-      "result": "W",
-      "score": "4-1",
-      "type": "friendly"
-    },
-    {
-      "opponent": "韩国",
-      "result": "D",
-      "score": "2-2",
-      "type": "friendly"
-    },
-    {
-      "opponent": "巴拉圭",
-      "result": "D",
-      "score": "2-2",
-      "type": "friendly"
-    },
-    {
-      "opponent": "巴拿马",
-      "result": "L",
-      "score": "2-3",
-      "type": "friendly"
-    },
-    {
-      "opponent": "挪威",
-      "result": "D",
-      "score": "2-2",
-      "type": "friendly"
-    }
+    { "date": "2025-03-20", "opponent": "巴林", "result": "W", "score": "2-0", "type": "qualifier" },
+    { "date": "2025-03-25", "opponent": "沙特阿拉伯", "result": "D", "score": "0-0", "type": "qualifier" },
+    { "date": "2025-06-05", "opponent": "澳大利亚", "result": "L", "score": "0-1", "type": "qualifier" },
+    { "date": "2025-06-10", "opponent": "印度尼西亚", "result": "W", "score": "6-0", "type": "qualifier" },
+    { "date": "2025-07-08", "opponent": "中国香港", "result": "W", "score": "6-1", "type": "tournament" },
+    { "date": "2025-07-12", "opponent": "中国", "result": "W", "score": "2-0", "type": "tournament" },
+    { "date": "2025-07-15", "opponent": "韩国", "result": "W", "score": "1-0", "type": "tournament" },
+    { "date": "2025-09-06", "opponent": "墨西哥", "result": "D", "score": "0-0", "type": "friendly" },
+    { "date": "2025-09-09", "opponent": "美国", "result": "L", "score": "0-2", "type": "friendly" },
+    { "date": "2025-10-10", "opponent": "巴拉圭", "result": "D", "score": "2-2", "type": "friendly" },
+    { "date": "2025-10-14", "opponent": "巴西", "result": "W", "score": "3-2", "type": "friendly" },
+    { "date": "2025-11-14", "opponent": "加纳", "result": "W", "score": "2-0", "type": "friendly" },
+    { "date": "2025-11-18", "opponent": "玻利维亚", "result": "W", "score": "3-0", "type": "friendly" },
+    { "date": "2026-03-28", "opponent": "苏格兰", "result": "W", "score": "1-0", "type": "friendly" },
+    { "date": "2026-03-31", "opponent": "英格兰", "result": "W", "score": "1-0", "type": "friendly" },
+    { "date": "2026-05-31", "opponent": "冰岛", "result": "W", "score": "1-0", "type": "friendly" }
   ],
-  "summary": {
-    "wins": 5,
-    "draws": 4,
-    "losses": 1,
-    "goals_scored": 30,
-    "goals_conceded": 16
-  }
+  "summary": { "wins": 11, "draws": 3, "losses": 2, "goals_scored": 30, "goals_conceded": 8 }
 }
