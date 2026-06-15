@@ -1,72 +1,28 @@
 {
   "team_id": "EGY",
   "last_10": [
-    {
-      "opponent": "塞内加尔",
-      "result": "W",
-      "score": "4-1",
-      "type": "friendly"
-    },
-    {
-      "opponent": "南非",
-      "result": "W",
-      "score": "4-1",
-      "type": "friendly"
-    },
-    {
-      "opponent": "苏格兰",
-      "result": "W",
-      "score": "4-1",
-      "type": "friendly"
-    },
-    {
-      "opponent": "沙特",
-      "result": "D",
-      "score": "2-2",
-      "type": "friendly"
-    },
-    {
-      "opponent": "卡塔尔",
-      "result": "W",
-      "score": "4-1",
-      "type": "friendly"
-    },
-    {
-      "opponent": "葡萄牙",
-      "result": "W",
-      "score": "4-1",
-      "type": "friendly"
-    },
-    {
-      "opponent": "韩国",
-      "result": "W",
-      "score": "4-1",
-      "type": "friendly"
-    },
-    {
-      "opponent": "巴拉圭",
-      "result": "W",
-      "score": "4-1",
-      "type": "friendly"
-    },
-    {
-      "opponent": "巴拿马",
-      "result": "D",
-      "score": "2-2",
-      "type": "friendly"
-    },
-    {
-      "opponent": "挪威",
-      "result": "D",
-      "score": "2-2",
-      "type": "friendly"
-    }
+    { "date": "2025-01-05", "opponent": "贝宁", "result": "W", "score": "3-1", "type": "tournament" },
+    { "date": "2025-01-10", "opponent": "科特迪瓦", "result": "W", "score": "3-2", "type": "tournament" },
+    { "date": "2025-01-14", "opponent": "塞内加尔", "result": "L", "score": "0-1", "type": "tournament" },
+    { "date": "2025-01-17", "opponent": "尼日利亚", "result": "L", "score": "0-0", "type": "tournament" },
+    { "date": "2025-09-06", "opponent": "佛得角", "result": "W", "score": "3-0", "type": "qualifier" },
+    { "date": "2025-09-10", "opponent": "博茨瓦纳", "result": "W", "score": "4-0", "type": "qualifier" },
+    { "date": "2025-10-11", "opponent": "毛里塔尼亚", "result": "W", "score": "2-0", "type": "qualifier" },
+    { "date": "2025-10-15", "opponent": "毛里塔尼亚", "result": "W", "score": "1-0", "type": "qualifier" },
+    { "date": "2025-11-14", "opponent": "乌兹别克斯坦", "result": "L", "score": "0-2", "type": "tournament" },
+    { "date": "2025-11-15", "opponent": "佛得角", "result": "D", "score": "1-1", "type": "qualifier" },
+    { "date": "2025-11-17", "opponent": "佛得角", "result": "W", "score": "1-1", "type": "tournament" },
+    { "date": "2025-11-19", "opponent": "博茨瓦纳", "result": "D", "score": "1-1", "type": "qualifier" },
+    { "date": "2025-12-02", "opponent": "科威特", "result": "D", "score": "1-1", "type": "tournament" },
+    { "date": "2025-12-06", "opponent": "阿联酋", "result": "D", "score": "1-1", "type": "tournament" },
+    { "date": "2025-12-09", "opponent": "约旦", "result": "L", "score": "0-3", "type": "tournament" },
+    { "date": "2025-12-22", "opponent": "津巴布韦", "result": "W", "score": "2-1", "type": "tournament" },
+    { "date": "2025-12-26", "opponent": "南非", "result": "W", "score": "1-0", "type": "tournament" },
+    { "date": "2025-12-29", "opponent": "安哥拉", "result": "D", "score": "0-0", "type": "tournament" },
+    { "date": "2026-03-21", "opponent": "埃塞俄比亚", "result": "W", "score": "2-0", "type": "qualifier" },
+    { "date": "2026-03-25", "opponent": "塞拉利昂", "result": "W", "score": "1-0", "type": "qualifier" },
+    { "date": "2026-06-06", "opponent": "布基纳法索", "result": "W", "score": "2-1", "type": "qualifier" },
+    { "date": "2026-06-10", "opponent": "几内亚比绍", "result": "D", "score": "1-1", "type": "qualifier" }
   ],
-  "summary": {
-    "wins": 7,
-    "draws": 3,
-    "losses": 0,
-    "goals_scored": 34,
-    "goals_conceded": 13
-  }
+  "summary": { "wins": 12, "draws": 6, "losses": 4, "goals_scored": 30, "goals_conceded": 17 }
 }
