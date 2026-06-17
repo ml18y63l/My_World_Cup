@@ -3,10 +3,10 @@
   "team_name": "克罗地亚",
   "team_name_en": "Croatia",
   "confederation": "UEFA",
-  "head_coach": "达利奇",
-  "total_value_m_euros": 380,
-  "fifa_ranking": 10,
-  "base_formation": "4-3-3",
+  "head_coach": "兹拉特科·达利奇",
+  "total_value_m_euros": 387,
+  "fifa_ranking": 11,
   "country_code": "hr",
-  "group": "L"
+  "group": "L",
+  "qualification": "UEFA Group L winner"
 }
