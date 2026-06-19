@@ -1,72 +1,34 @@
 {
   "team_id": "MEX",
   "last_10": [
-    {
-      "opponent": "塞内加尔",
-      "result": "W",
-      "score": "4-1",
-      "type": "friendly"
-    },
-    {
-      "opponent": "南非",
-      "result": "W",
-      "score": "4-1",
-      "type": "friendly"
-    },
-    {
-      "opponent": "苏格兰",
-      "result": "W",
-      "score": "4-1",
-      "type": "friendly"
-    },
-    {
-      "opponent": "沙特",
-      "result": "D",
-      "score": "2-2",
-      "type": "friendly"
-    },
-    {
-      "opponent": "卡塔尔",
-      "result": "W",
-      "score": "4-1",
-      "type": "friendly"
-    },
-    {
-      "opponent": "葡萄牙",
-      "result": "W",
-      "score": "4-1",
-      "type": "friendly"
-    },
-    {
-      "opponent": "韩国",
-      "result": "W",
-      "score": "4-1",
-      "type": "friendly"
-    },
-    {
-      "opponent": "巴拉圭",
-      "result": "W",
-      "score": "4-1",
-      "type": "friendly"
-    },
-    {
-      "opponent": "巴拿马",
-      "result": "D",
-      "score": "2-2",
-      "type": "friendly"
-    },
-    {
-      "opponent": "挪威",
-      "result": "D",
-      "score": "2-2",
-      "type": "friendly"
-    }
+    { "date": "2025-01-16", "opponent": "巴西国际", "result": "W", "score": "2-0", "type": "friendly" },
+    { "date": "2025-01-21", "opponent": "河床", "result": "L", "score": "0-2", "type": "friendly" },
+    { "date": "2025-03-20", "opponent": "加拿大", "result": "W", "score": "2-0", "type": "tournament" },
+    { "date": "2025-03-23", "opponent": "巴拿马", "result": "L", "score": "1-2", "type": "tournament" },
+    { "date": "2025-06-07", "opponent": "瑞士", "result": "W", "score": "4-2", "type": "friendly" },
+    { "date": "2025-06-10", "opponent": "土耳其", "result": "L", "score": "0-1", "type": "friendly" },
+    { "date": "2025-06-14", "opponent": "多米尼加共和国", "result": "L", "score": "2-3", "type": "tournament" },
+    { "date": "2025-06-18", "opponent": "苏里南", "result": "W", "score": "2-0", "type": "tournament" },
+    { "date": "2025-06-22", "opponent": "哥斯达黎加", "result": "D", "score": "0-0", "type": "tournament" },
+    { "date": "2025-06-28", "opponent": "沙特阿拉伯", "result": "L", "score": "0-2", "type": "tournament" },
+    { "date": "2025-07-02", "opponent": "洪都拉斯", "result": "L", "score": "0-1", "type": "tournament" },
+    { "date": "2025-07-06", "opponent": "美国", "result": "W", "score": "2-1", "type": "tournament" },
+    { "date": "2025-09-06", "opponent": "日本", "result": "D", "score": "0-0", "type": "friendly" },
+    { "date": "2025-09-09", "opponent": "韩国", "result": "D", "score": "2-2", "type": "friendly" },
+    { "date": "2025-10-11", "opponent": "哥伦比亚", "result": "W", "score": "4-0", "type": "friendly" },
+    { "date": "2025-10-14", "opponent": "厄瓜多尔", "result": "D", "score": "1-1", "type": "friendly" },
+    { "date": "2025-11-15", "opponent": "乌拉圭", "result": "D", "score": "0-0", "type": "friendly" },
+    { "date": "2025-11-18", "opponent": "巴拉圭", "result": "W", "score": "2-1", "type": "friendly" },
+    { "date": "2026-01-22", "opponent": "巴拿马", "result": "W", "score": "1-0", "type": "friendly" },
+    { "date": "2026-01-25", "opponent": "玻利维亚", "result": "W", "score": "1-0", "type": "friendly" },
+    { "date": "2026-02-25", "opponent": "冰岛", "result": "L", "score": "0-4", "type": "friendly" },
+    { "date": "2026-03-28", "opponent": "葡萄牙", "result": "D", "score": "0-0", "type": "friendly" },
+    { "date": "2026-03-31", "opponent": "比利时", "result": "D", "score": "1-1", "type": "friendly" },
+    { "date": "2026-05-22", "opponent": "加纳", "result": "L", "score": "0-2", "type": "friendly" },
+    { "date": "2026-05-30", "opponent": "澳大利亚", "result": "L", "score": "0-1", "type": "friendly" },
+    { "date": "2026-06-04", "opponent": "塞尔维亚", "result": "L", "score": "1-5", "type": "friendly" },
+    { "date": "2026-06-11", "opponent": "南非", "result": "L", "score": "0-2", "type": "tournament" },
+    { "date": "2026-06-18", "opponent": "韩国", "result": "L", "score": "0-1", "type": "tournament" }
   ],
-  "summary": {
-    "wins": 7,
-    "draws": 3,
-    "losses": 0,
-    "goals_scored": 34,
-    "goals_conceded": 13
-  }
+  "summary": { "wins": 9, "draws": 7, "losses": 12, "goals_scored": 27, "goals_conceded": 34 }
 }
