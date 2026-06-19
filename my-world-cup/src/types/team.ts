@@ -126,6 +126,8 @@ export interface TeamPageData {
   squad: SquadData | null;
   form: RecentFormData | null;
   overall_score: number;
+  /** true 表示该球队尚未录入真实数据（缺大名单/战绩，或雷达与 deriveRadar 不一致），页面为占位数据 */
+  is_placeholder: boolean;
 }
 
 export const BAR_GRADIENTS = [

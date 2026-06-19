@@ -6,6 +6,7 @@ import type { TeamProfile, RadarMetrics, TeamOverall, OddsEntry, GroupData, Stra
 import type { H2HPageData } from "@/types/simulation";
 import { GROUP_COLORS } from "@/types/team";
 import { calculateOverallScore } from "./score";
+import { deriveRadar } from "./deriveRadar";
 
 const DB_DIR = path.join(process.cwd(), "database", "2_ability_models");
 
@@ -184,6 +185,26 @@ export function getSquad(teamNameEn: string): SquadData | null {
 }
 
 /**
+ * 判断球队是否已录入真实数据：需同时具备大名单、战绩、雷达，
+ * 且 deriveRadar(squad, form) 与已发布雷达一致。占位/模板数据
+ * （缺文件，或未按方法论推导）会无法通过一致性校验，视为占位。
+ */
+function hasRealData(squad: SquadData | null, form: RecentFormData | null, radar: RadarMetrics | null): boolean {
+  if (!squad || squad.players.length === 0 || !form || !radar) return false;
+  const derived = deriveRadar(squad, form);
+  return (
+    derived.attack === radar.attack &&
+    derived.defense === radar.defense &&
+    derived.control === radar.control &&
+    derived.status === radar.status &&
+    derived.experience === radar.experience &&
+    derived.place_kick === radar.place_kick &&
+    derived.superstar === radar.superstar &&
+    derived.penalty === radar.penalty
+  );
+}
+
+/**
  * 按 team_id 取整页数据（profile + radar + squad + form + overall）
  */
 export function getTeamPageData(teamId: string): TeamPageData | null {
@@ -195,5 +216,6 @@ export function getTeamPageData(teamId: string): TeamPageData | null {
   const formMap = getRecentFormsMap();
   const form = formMap[profile.team_name_en] ?? null;
   const overall_score = radar ? calculateOverallScore(radar) : 0;
-  return { profile, radar, squad, form, overall_score };
+  const is_placeholder = !hasRealData(squad, form, radar);
+  return { profile, radar, squad, form, overall_score, is_placeholder };
 }

@@ -22,7 +22,7 @@ function formatValue(valueM: number): string {
 }
 
 export function TeamProfileClient({ data }: { data: TeamPageData }) {
-  const { profile, radar, squad, form, overall_score } = data;
+  const { profile, radar, squad, form, overall_score, is_placeholder } = data;
   const flagUrl = `https://flagcdn.com/w40/${profile.country_code}.png`;
 
   return (
@@ -42,6 +42,19 @@ export function TeamProfileClient({ data }: { data: TeamPageData }) {
           </div>
         )}
       </div>
+
+      {/* 占位数据警示 */}
+      {is_placeholder && (
+        <div className="mb-5 rounded-lg border border-amber-300 bg-amber-50 px-4 py-3 flex items-start gap-2.5">
+          <span className="text-amber-500 text-base leading-5 shrink-0">⚠</span>
+          <div className="min-w-0">
+            <p className="text-[13px] font-bold text-amber-800">占位数据 · 无参考价值</p>
+            <p className="text-[11px] leading-relaxed text-amber-700 mt-0.5">
+              本页能力雷达、近期战绩与综合评分均为模板占位数据，尚未录入真实数据，请勿用于分析或球队对比。
+            </p>
+          </div>
+        </div>
+      )}
 
       {/* 概览卡 */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-2 mb-6">
