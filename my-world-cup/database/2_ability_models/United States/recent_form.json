@@ -1,72 +1,12 @@
 {
-  "team_id": "States",
+  "team_id": "USA",
   "last_10": [
-    {
-      "opponent": "苏格兰",
-      "result": "W",
-      "score": "4-1",
-      "type": "friendly"
-    },
-    {
-      "opponent": "塞内加尔",
-      "result": "W",
-      "score": "4-1",
-      "type": "friendly"
-    },
-    {
-      "opponent": "沙特",
-      "result": "W",
-      "score": "4-1",
-      "type": "friendly"
-    },
-    {
-      "opponent": "卡塔尔",
-      "result": "D",
-      "score": "2-2",
-      "type": "friendly"
-    },
-    {
-      "opponent": "葡萄牙",
-      "result": "W",
-      "score": "4-1",
-      "type": "friendly"
-    },
-    {
-      "opponent": "巴拉圭",
-      "result": "W",
-      "score": "4-1",
-      "type": "friendly"
-    },
-    {
-      "opponent": "南非",
-      "result": "W",
-      "score": "4-1",
-      "type": "friendly"
-    },
-    {
-      "opponent": "巴拿马",
-      "result": "W",
-      "score": "4-1",
-      "type": "friendly"
-    },
-    {
-      "opponent": "挪威",
-      "result": "D",
-      "score": "2-2",
-      "type": "friendly"
-    },
-    {
-      "opponent": "新西兰",
-      "result": "D",
-      "score": "2-2",
-      "type": "friendly"
-    }
+    { "date": "2025-06-19", "opponent": "沙特阿拉伯", "result": "W", "score": "1-0", "type": "tournament" },
+    { "date": "2025-06-22", "opponent": "海地", "result": "W", "score": "2-1", "type": "tournament" },
+    { "date": "2025-06-29", "opponent": "哥斯达黎加", "result": "W", "score": "2-2", "type": "tournament" },
+    { "date": "2025-07-02", "opponent": "危地马拉", "result": "W", "score": "2-1", "type": "tournament" },
+    { "date": "2025-07-06", "opponent": "墨西哥", "result": "L", "score": "1-2", "type": "tournament" },
+    { "date": "2026-06-12", "opponent": "巴拉圭", "result": "W", "score": "4-1", "type": "tournament" }
   ],
-  "summary": {
-    "wins": 7,
-    "draws": 3,
-    "losses": 0,
-    "goals_scored": 34,
-    "goals_conceded": 13
-  }
+  "summary": { "wins": 5, "draws": 0, "losses": 1, "goals_scored": 12, "goals_conceded": 7 }
 }
