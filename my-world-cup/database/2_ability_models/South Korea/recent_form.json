@@ -1,72 +1,25 @@
 {
-  "team_id": "Korea",
+  "team_id": "KOR",
   "last_10": [
-    {
-      "opponent": "苏格兰",
-      "result": "W",
-      "score": "4-1",
-      "type": "friendly"
-    },
-    {
-      "opponent": "塞内加尔",
-      "result": "W",
-      "score": "4-1",
-      "type": "friendly"
-    },
-    {
-      "opponent": "沙特",
-      "result": "W",
-      "score": "4-1",
-      "type": "friendly"
-    },
-    {
-      "opponent": "卡塔尔",
-      "result": "D",
-      "score": "2-2",
-      "type": "friendly"
-    },
-    {
-      "opponent": "葡萄牙",
-      "result": "W",
-      "score": "4-1",
-      "type": "friendly"
-    },
-    {
-      "opponent": "巴拉圭",
-      "result": "W",
-      "score": "4-1",
-      "type": "friendly"
-    },
-    {
-      "opponent": "南非",
-      "result": "D",
-      "score": "2-2",
-      "type": "friendly"
-    },
-    {
-      "opponent": "巴拿马",
-      "result": "D",
-      "score": "2-2",
-      "type": "friendly"
-    },
-    {
-      "opponent": "挪威",
-      "result": "L",
-      "score": "2-3",
-      "type": "friendly"
-    },
-    {
-      "opponent": "新西兰",
-      "result": "D",
-      "score": "2-2",
-      "type": "friendly"
-    }
+    { "date": "2025-07-07", "opponent": "中国", "result": "W", "score": "3-0", "type": "tournament" },
+    { "date": "2025-07-11", "opponent": "中国香港", "result": "W", "score": "2-0", "type": "tournament" },
+    { "date": "2025-07-15", "opponent": "日本", "result": "L", "score": "0-1", "type": "tournament" },
+    { "date": "2026-03-20", "opponent": "阿曼", "result": "D", "score": "1-1", "type": "qualifier" },
+    { "date": "2026-03-21", "opponent": "泰国", "result": "D", "score": "1-1", "type": "qualifier" },
+    { "date": "2026-03-25", "opponent": "约旦", "result": "D", "score": "1-1", "type": "qualifier" },
+    { "date": "2026-03-26", "opponent": "泰国", "result": "W", "score": "3-0", "type": "qualifier" },
+    { "date": "2026-06-05", "opponent": "伊拉克", "result": "W", "score": "2-0", "type": "qualifier" },
+    { "date": "2026-06-06", "opponent": "新加坡", "result": "W", "score": "7-0", "type": "qualifier" },
+    { "date": "2026-06-10", "opponent": "科威特", "result": "W", "score": "4-0", "type": "qualifier" },
+    { "date": "2026-06-11", "opponent": "中国", "result": "W", "score": "1-0", "type": "qualifier" },
+    { "date": "2026-09-05", "opponent": "巴勒斯坦", "result": "D", "score": "0-0", "type": "qualifier" },
+    { "date": "2026-09-10", "opponent": "阿曼", "result": "W", "score": "3-1", "type": "qualifier" },
+    { "date": "2026-10-10", "opponent": "约旦", "result": "W", "score": "2-0", "type": "qualifier" },
+    { "date": "2026-10-15", "opponent": "伊拉克", "result": "W", "score": "3-2", "type": "qualifier" },
+    { "date": "2026-11-14", "opponent": "科威特", "result": "W", "score": "3-1", "type": "qualifier" },
+    { "date": "2026-11-16", "opponent": "新加坡", "result": "W", "score": "5-0", "type": "qualifier" },
+    { "date": "2026-11-19", "opponent": "巴勒斯坦", "result": "D", "score": "1-1", "type": "qualifier" },
+    { "date": "2026-11-21", "opponent": "中国", "result": "W", "score": "3-0", "type": "qualifier" }
   ],
-  "summary": {
-    "wins": 5,
-    "draws": 4,
-    "losses": 1,
-    "goals_scored": 30,
-    "goals_conceded": 16
-  }
+  "summary": { "wins": 13, "draws": 5, "losses": 1, "goals_scored": 45, "goals_conceded": 9 }
 }
