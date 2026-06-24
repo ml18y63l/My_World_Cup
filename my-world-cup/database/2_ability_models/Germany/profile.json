@@ -3,10 +3,10 @@
   "team_name": "德国",
   "team_name_en": "Germany",
   "confederation": "UEFA",
-  "head_coach": "纳格尔斯曼",
-  "total_value_m_euros": 820,
-  "fifa_ranking": 3,
-  "base_formation": "4-2-3-1",
+  "head_coach": "尤利安·纳格尔斯曼",
+  "total_value_m_euros": 947,
+  "fifa_ranking": 10,
   "country_code": "de",
-  "group": "E"
+  "group": "E",
+  "qualification": "UEFA Group A winner"
 }
