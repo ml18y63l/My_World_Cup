@@ -1,0 +1,77 @@
+{
+  "tournament": "2026 FIFA World Cup",
+  "started": false,
+  "note": "淘汰赛尚未开始。此为 FIFA 官方赛程框架：小组赛前两名（每组2支，共24支）与8支成绩最好的小组第三（共32支）晋级 1/16 决赛。下方对阵的“抽签位置”由官方对阵表确定，待小组赛第3轮结束后填入具体球队与比分。",
+  "format": "32 队晋级：12 个小组前 2 名 + 8 个成绩最好的小组第 3 名 → 1/16 决赛 → 1/8 → 1/4 → 半决赛 → 决赛 / 季军赛",
+  "third_place_count": 8,
+  "rounds": [
+    {
+      "round": "round_of_32",
+      "label": "1/16 决赛",
+      "ties": [
+        { "id": "R32-1", "match": 73, "home_slot": "A组第2", "away_slot": "B组第2", "home_team": null, "away_team": null, "home_goals": null, "away_goals": null, "played": false },
+        { "id": "R32-2", "match": 74, "home_slot": "E组第1", "away_slot": "小组第3(A/B/C/D/F)", "home_team": null, "away_team": null, "home_goals": null, "away_goals": null, "played": false },
+        { "id": "R32-3", "match": 75, "home_slot": "F组第1", "away_slot": "C组第2", "home_team": null, "away_team": null, "home_goals": null, "away_goals": null, "played": false },
+        { "id": "R32-4", "match": 76, "home_slot": "C组第1", "away_slot": "F组第2", "home_team": null, "away_team": null, "home_goals": null, "away_goals": null, "played": false },
+        { "id": "R32-5", "match": 77, "home_slot": "I组第1", "away_slot": "小组第3(C/D/F/G/H)", "home_team": null, "away_team": null, "home_goals": null, "away_goals": null, "played": false },
+        { "id": "R32-6", "match": 78, "home_slot": "E组第2", "away_slot": "I组第2", "home_team": null, "away_team": null, "home_goals": null, "away_goals": null, "played": false },
+        { "id": "R32-7", "match": 79, "home_slot": "A组第1", "away_slot": "小组第3(C/E/F/H/I)", "home_team": null, "away_team": null, "home_goals": null, "away_goals": null, "played": false },
+        { "id": "R32-8", "match": 80, "home_slot": "L组第1", "away_slot": "小组第3(E/H/I/J/K)", "home_team": null, "away_team": null, "home_goals": null, "away_goals": null, "played": false },
+        { "id": "R32-9", "match": 81, "home_slot": "D组第1", "away_slot": "小组第3(B/E/F/I/J)", "home_team": null, "away_team": null, "home_goals": null, "away_goals": null, "played": false },
+        { "id": "R32-10", "match": 82, "home_slot": "G组第1", "away_slot": "小组第3(A/E/H/I/J)", "home_team": null, "away_team": null, "home_goals": null, "away_goals": null, "played": false },
+        { "id": "R32-11", "match": 83, "home_slot": "K组第2", "away_slot": "L组第2", "home_team": null, "away_team": null, "home_goals": null, "away_goals": null, "played": false },
+        { "id": "R32-12", "match": 84, "home_slot": "H组第1", "away_slot": "J组第2", "home_team": null, "away_team": null, "home_goals": null, "away_goals": null, "played": false },
+        { "id": "R32-13", "match": 85, "home_slot": "B组第1", "away_slot": "小组第3(E/F/G/I/J)", "home_team": null, "away_team": null, "home_goals": null, "away_goals": null, "played": false },
+        { "id": "R32-14", "match": 86, "home_slot": "J组第1", "away_slot": "H组第2", "home_team": null, "away_team": null, "home_goals": null, "away_goals": null, "played": false },
+        { "id": "R32-15", "match": 87, "home_slot": "K组第1", "away_slot": "小组第3(D/E/I/J/L)", "home_team": null, "away_team": null, "home_goals": null, "away_goals": null, "played": false },
+        { "id": "R32-16", "match": 88, "home_slot": "D组第2", "away_slot": "G组第2", "home_team": null, "away_team": null, "home_goals": null, "away_goals": null, "played": false }
+      ]
+    },
+    {
+      "round": "round_of_16",
+      "label": "1/8 决赛",
+      "ties": [
+        { "id": "R16-1", "match": 89, "home_slot": "M74胜者", "away_slot": "M77胜者", "home_team": null, "away_team": null, "home_goals": null, "away_goals": null, "played": false },
+        { "id": "R16-2", "match": 90, "home_slot": "M73胜者", "away_slot": "M75胜者", "home_team": null, "away_team": null, "home_goals": null, "away_goals": null, "played": false },
+        { "id": "R16-3", "match": 91, "home_slot": "M76胜者", "away_slot": "M78胜者", "home_team": null, "away_team": null, "home_goals": null, "away_goals": null, "played": false },
+        { "id": "R16-4", "match": 92, "home_slot": "M79胜者", "away_slot": "M80胜者", "home_team": null, "away_team": null, "home_goals": null, "away_goals": null, "played": false },
+        { "id": "R16-5", "match": 93, "home_slot": "M83胜者", "away_slot": "M84胜者", "home_team": null, "away_team": null, "home_goals": null, "away_goals": null, "played": false },
+        { "id": "R16-6", "match": 94, "home_slot": "M81胜者", "away_slot": "M82胜者", "home_team": null, "away_team": null, "home_goals": null, "away_goals": null, "played": false },
+        { "id": "R16-7", "match": 95, "home_slot": "M86胜者", "away_slot": "M88胜者", "home_team": null, "away_team": null, "home_goals": null, "away_goals": null, "played": false },
+        { "id": "R16-8", "match": 96, "home_slot": "M85胜者", "away_slot": "M87胜者", "home_team": null, "away_team": null, "home_goals": null, "away_goals": null, "played": false }
+      ]
+    },
+    {
+      "round": "quarter_finals",
+      "label": "1/4 决赛",
+      "ties": [
+        { "id": "QF-1", "match": 97, "home_slot": "M89胜者", "away_slot": "M90胜者", "home_team": null, "away_team": null, "home_goals": null, "away_goals": null, "played": false },
+        { "id": "QF-2", "match": 98, "home_slot": "M93胜者", "away_slot": "M94胜者", "home_team": null, "away_team": null, "home_goals": null, "away_goals": null, "played": false },
+        { "id": "QF-3", "match": 99, "home_slot": "M91胜者", "away_slot": "M92胜者", "home_team": null, "away_team": null, "home_goals": null, "away_goals": null, "played": false },
+        { "id": "QF-4", "match": 100, "home_slot": "M95胜者", "away_slot": "M96胜者", "home_team": null, "away_team": null, "home_goals": null, "away_goals": null, "played": false }
+      ]
+    },
+    {
+      "round": "semi_finals",
+      "label": "半决赛",
+      "ties": [
+        { "id": "SF-1", "match": 101, "home_slot": "M97胜者", "away_slot": "M98胜者", "home_team": null, "away_team": null, "home_goals": null, "away_goals": null, "played": false },
+        { "id": "SF-2", "match": 102, "home_slot": "M99胜者", "away_slot": "M100胜者", "home_team": null, "away_team": null, "home_goals": null, "away_goals": null, "played": false }
+      ]
+    },
+    {
+      "round": "third_place",
+      "label": "季军赛",
+      "ties": [
+        { "id": "TP-1", "match": 103, "home_slot": "M101负者", "away_slot": "M102负者", "home_team": null, "away_team": null, "home_goals": null, "away_goals": null, "played": false }
+      ]
+    },
+    {
+      "round": "final",
+      "label": "决赛",
+      "ties": [
+        { "id": "F-1", "match": 104, "home_slot": "M101胜者", "away_slot": "M102胜者", "home_team": null, "away_team": null, "home_goals": null, "away_goals": null, "played": false }
+      ]
+    }
+  ]
+}

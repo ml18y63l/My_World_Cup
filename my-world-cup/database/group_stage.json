@@ -1,0 +1,202 @@
+{
+  "tournament": "2026 FIFA World Cup",
+  "rounds_complete": 2,
+  "total_rounds": 3,
+  "updated_through_date": "2026-06-25",
+  "source": "FIFA / Wikipedia 官方积分榜（小组赛前两轮战罢）",
+  "note": "截至 2026-06-25，小组赛前两轮（第1、2轮）已全部完赛，第三轮尚未开赛。积分榜为官方数据；部分场次的比分由官方积分榜的进/失球总数唯一还原，已在赛果中注明。",
+  "groups": [
+    {
+      "group": "A",
+      "updated_through_date": "2026-06-18",
+      "standings": [
+        { "pos": 1, "team_name_en": "Mexico", "played": 2, "won": 2, "drawn": 0, "lost": 0, "gf": 3, "ga": 0, "gd": 3, "points": 6 },
+        { "pos": 2, "team_name_en": "South Korea", "played": 2, "won": 1, "drawn": 0, "lost": 1, "gf": 2, "ga": 2, "gd": 0, "points": 3 },
+        { "pos": 3, "team_name_en": "Czech Republic", "played": 2, "won": 0, "drawn": 1, "lost": 1, "gf": 2, "ga": 3, "gd": -1, "points": 1 },
+        { "pos": 4, "team_name_en": "South Africa", "played": 2, "won": 0, "drawn": 1, "lost": 1, "gf": 1, "ga": 3, "gd": -2, "points": 1 }
+      ],
+      "matches": [
+        { "matchday": 1, "date": "2026-06-12", "home": "Mexico", "away": "South Africa", "home_goals": 2, "away_goals": 0, "source": "cited" },
+        { "matchday": 1, "date": "2026-06-12", "home": "South Korea", "away": "Czech Republic", "home_goals": 2, "away_goals": 1, "source": "cited" },
+        { "matchday": 2, "date": "2026-06-18", "home": "Czech Republic", "away": "South Africa", "home_goals": 1, "away_goals": 1, "source": "cited" },
+        { "matchday": 2, "date": "2026-06-18", "home": "Mexico", "away": "South Korea", "home_goals": 1, "away_goals": 0, "source": "cited" }
+      ]
+    },
+    {
+      "group": "B",
+      "updated_through_date": "2026-06-18",
+      "standings": [
+        { "pos": 1, "team_name_en": "Canada", "played": 2, "won": 1, "drawn": 1, "lost": 0, "gf": 7, "ga": 1, "gd": 6, "points": 4 },
+        { "pos": 2, "team_name_en": "Switzerland", "played": 2, "won": 1, "drawn": 1, "lost": 0, "gf": 5, "ga": 2, "gd": 3, "points": 4 },
+        { "pos": 3, "team_name_en": "Bosnia and Herzegovina", "played": 2, "won": 0, "drawn": 1, "lost": 1, "gf": 2, "ga": 5, "gd": -3, "points": 1 },
+        { "pos": 4, "team_name_en": "Qatar", "played": 2, "won": 0, "drawn": 1, "lost": 1, "gf": 1, "ga": 7, "gd": -6, "points": 1 }
+      ],
+      "matches": [
+        { "matchday": 1, "date": "2026-06-12", "home": "Canada", "away": "Bosnia and Herzegovina", "home_goals": 1, "away_goals": 1, "source": "cited" },
+        { "matchday": 1, "date": "2026-06-13", "home": "Qatar", "away": "Switzerland", "home_goals": 1, "away_goals": 1, "source": "cited" },
+        { "matchday": 2, "date": "2026-06-18", "home": "Switzerland", "away": "Bosnia and Herzegovina", "home_goals": 4, "away_goals": 1, "source": "cited" },
+        { "matchday": 2, "date": "2026-06-18", "home": "Canada", "away": "Qatar", "home_goals": 6, "away_goals": 0, "source": "cited" }
+      ]
+    },
+    {
+      "group": "C",
+      "updated_through_date": "2026-06-19",
+      "standings": [
+        { "pos": 1, "team_name_en": "Brazil", "played": 2, "won": 1, "drawn": 1, "lost": 0, "gf": 4, "ga": 1, "gd": 3, "points": 4 },
+        { "pos": 2, "team_name_en": "Morocco", "played": 2, "won": 1, "drawn": 1, "lost": 0, "gf": 2, "ga": 1, "gd": 1, "points": 4 },
+        { "pos": 3, "team_name_en": "Scotland", "played": 2, "won": 1, "drawn": 0, "lost": 1, "gf": 1, "ga": 1, "gd": 0, "points": 3 },
+        { "pos": 4, "team_name_en": "Haiti", "played": 2, "won": 0, "drawn": 0, "lost": 2, "gf": 0, "ga": 4, "gd": -4, "points": 0 }
+      ],
+      "matches": [
+        { "matchday": 1, "date": "2026-06-13", "home": "Brazil", "away": "Morocco", "home_goals": 1, "away_goals": 1, "source": "cited" },
+        { "matchday": 1, "date": "2026-06-13", "home": "Haiti", "away": "Scotland", "home_goals": 0, "away_goals": 1, "source": "cited" },
+        { "matchday": 2, "date": "2026-06-19", "home": "Scotland", "away": "Morocco", "home_goals": 0, "away_goals": 1, "source": "cited" },
+        { "matchday": 2, "date": "2026-06-19", "home": "Brazil", "away": "Haiti", "home_goals": 3, "away_goals": 0, "source": "cited" }
+      ]
+    },
+    {
+      "group": "D",
+      "updated_through_date": "2026-06-19",
+      "standings": [
+        { "pos": 1, "team_name_en": "United States", "played": 2, "won": 2, "drawn": 0, "lost": 0, "gf": 6, "ga": 1, "gd": 5, "points": 6 },
+        { "pos": 2, "team_name_en": "Australia", "played": 2, "won": 1, "drawn": 0, "lost": 1, "gf": 2, "ga": 2, "gd": 0, "points": 3 },
+        { "pos": 3, "team_name_en": "Paraguay", "played": 2, "won": 1, "drawn": 0, "lost": 1, "gf": 2, "ga": 4, "gd": -2, "points": 3 },
+        { "pos": 4, "team_name_en": "Turkey", "played": 2, "won": 0, "drawn": 0, "lost": 2, "gf": 0, "ga": 3, "gd": -3, "points": 0 }
+      ],
+      "matches": [
+        { "matchday": 1, "date": "2026-06-12", "home": "United States", "away": "Paraguay", "home_goals": 4, "away_goals": 1, "source": "cited" },
+        { "matchday": 1, "date": "2026-06-13", "home": "Australia", "away": "Turkey", "home_goals": 2, "away_goals": 0, "source": "cited" },
+        { "matchday": 2, "date": "2026-06-19", "home": "United States", "away": "Australia", "home_goals": 2, "away_goals": 0, "source": "confirmed" },
+        { "matchday": 2, "date": "2026-06-19", "home": "Paraguay", "away": "Turkey", "home_goals": 1, "away_goals": 0, "source": "confirmed" }
+      ]
+    },
+    {
+      "group": "E",
+      "updated_through_date": "2026-06-20",
+      "standings": [
+        { "pos": 1, "team_name_en": "Germany", "played": 2, "won": 2, "drawn": 0, "lost": 0, "gf": 9, "ga": 2, "gd": 7, "points": 6 },
+        { "pos": 2, "team_name_en": "Ivory Coast", "played": 2, "won": 1, "drawn": 0, "lost": 1, "gf": 2, "ga": 2, "gd": 0, "points": 3 },
+        { "pos": 3, "team_name_en": "Ecuador", "played": 2, "won": 0, "drawn": 1, "lost": 1, "gf": 0, "ga": 1, "gd": -1, "points": 1 },
+        { "pos": 4, "team_name_en": "Curacao", "played": 2, "won": 0, "drawn": 1, "lost": 1, "gf": 1, "ga": 7, "gd": -6, "points": 1 }
+      ],
+      "matches": [
+        { "matchday": 1, "date": "2026-06-14", "home": "Germany", "away": "Curacao", "home_goals": 7, "away_goals": 1, "source": "confirmed" },
+        { "matchday": 1, "date": "2026-06-14", "home": "Ivory Coast", "away": "Ecuador", "home_goals": 1, "away_goals": 0, "source": "derived" },
+        { "matchday": 2, "date": "2026-06-20", "home": "Germany", "away": "Ivory Coast", "home_goals": 2, "away_goals": 1, "source": "derived" },
+        { "matchday": 2, "date": "2026-06-20", "home": "Ecuador", "away": "Curacao", "home_goals": 0, "away_goals": 0, "source": "derived" }
+      ]
+    },
+    {
+      "group": "F",
+      "updated_through_date": "2026-06-20",
+      "standings": [
+        { "pos": 1, "team_name_en": "Netherlands", "played": 2, "won": 1, "drawn": 1, "lost": 0, "gf": 7, "ga": 3, "gd": 4, "points": 4 },
+        { "pos": 2, "team_name_en": "Japan", "played": 2, "won": 1, "drawn": 1, "lost": 0, "gf": 6, "ga": 2, "gd": 4, "points": 4 },
+        { "pos": 3, "team_name_en": "Sweden", "played": 2, "won": 1, "drawn": 0, "lost": 1, "gf": 6, "ga": 6, "gd": 0, "points": 3 },
+        { "pos": 4, "team_name_en": "Tunisia", "played": 2, "won": 0, "drawn": 0, "lost": 2, "gf": 1, "ga": 9, "gd": -8, "points": 0 }
+      ],
+      "matches": [
+        { "matchday": 1, "date": "2026-06-14", "home": "Netherlands", "away": "Japan", "home_goals": 2, "away_goals": 2, "source": "confirmed" },
+        { "matchday": 1, "date": "2026-06-14", "home": "Sweden", "away": "Tunisia", "home_goals": 5, "away_goals": 1, "source": "cited" },
+        { "matchday": 2, "date": "2026-06-20", "home": "Netherlands", "away": "Sweden", "home_goals": 5, "away_goals": 1, "source": "cited" },
+        { "matchday": 2, "date": "2026-06-20", "home": "Tunisia", "away": "Japan", "home_goals": 0, "away_goals": 4, "source": "derived" }
+      ]
+    },
+    {
+      "group": "G",
+      "updated_through_date": "2026-06-21",
+      "standings": [
+        { "pos": 1, "team_name_en": "Egypt", "played": 2, "won": 1, "drawn": 1, "lost": 0, "gf": 4, "ga": 2, "gd": 2, "points": 4 },
+        { "pos": 2, "team_name_en": "Iran", "played": 2, "won": 0, "drawn": 2, "lost": 0, "gf": 2, "ga": 2, "gd": 0, "points": 2 },
+        { "pos": 3, "team_name_en": "Belgium", "played": 2, "won": 0, "drawn": 2, "lost": 0, "gf": 1, "ga": 1, "gd": 0, "points": 2 },
+        { "pos": 4, "team_name_en": "New Zealand", "played": 2, "won": 0, "drawn": 1, "lost": 1, "gf": 3, "ga": 5, "gd": -2, "points": 1 }
+      ],
+      "matches": [
+        { "matchday": 1, "date": "2026-06-15", "home": "Belgium", "away": "Egypt", "home_goals": 1, "away_goals": 1, "source": "cited" },
+        { "matchday": 1, "date": "2026-06-15", "home": "Iran", "away": "New Zealand", "home_goals": 2, "away_goals": 2, "source": "cited" },
+        { "matchday": 2, "date": "2026-06-21", "home": "Belgium", "away": "Iran", "home_goals": 0, "away_goals": 0, "source": "cited" },
+        { "matchday": 2, "date": "2026-06-21", "home": "New Zealand", "away": "Egypt", "home_goals": 1, "away_goals": 3, "source": "cited" }
+      ]
+    },
+    {
+      "group": "H",
+      "updated_through_date": "2026-06-21",
+      "standings": [
+        { "pos": 1, "team_name_en": "Spain", "played": 2, "won": 1, "drawn": 1, "lost": 0, "gf": 4, "ga": 0, "gd": 4, "points": 4 },
+        { "pos": 2, "team_name_en": "Uruguay", "played": 2, "won": 0, "drawn": 2, "lost": 0, "gf": 3, "ga": 3, "gd": 0, "points": 2 },
+        { "pos": 3, "team_name_en": "Cape Verde", "played": 2, "won": 0, "drawn": 2, "lost": 0, "gf": 2, "ga": 2, "gd": 0, "points": 2 },
+        { "pos": 4, "team_name_en": "Saudi Arabia", "played": 2, "won": 0, "drawn": 1, "lost": 1, "gf": 1, "ga": 5, "gd": -4, "points": 1 }
+      ],
+      "matches": [
+        { "matchday": 1, "date": "2026-06-15", "home": "Spain", "away": "Cape Verde", "home_goals": 0, "away_goals": 0, "source": "cited" },
+        { "matchday": 1, "date": "2026-06-15", "home": "Saudi Arabia", "away": "Uruguay", "home_goals": 1, "away_goals": 1, "source": "cited" },
+        { "matchday": 2, "date": "2026-06-21", "home": "Spain", "away": "Saudi Arabia", "home_goals": 4, "away_goals": 0, "source": "derived" },
+        { "matchday": 2, "date": "2026-06-21", "home": "Uruguay", "away": "Cape Verde", "home_goals": 2, "away_goals": 2, "source": "derived" }
+      ]
+    },
+    {
+      "group": "I",
+      "updated_through_date": "2026-06-22",
+      "standings": [
+        { "pos": 1, "team_name_en": "France", "played": 2, "won": 2, "drawn": 0, "lost": 0, "gf": 6, "ga": 1, "gd": 5, "points": 6 },
+        { "pos": 2, "team_name_en": "Norway", "played": 2, "won": 2, "drawn": 0, "lost": 0, "gf": 7, "ga": 3, "gd": 4, "points": 6 },
+        { "pos": 3, "team_name_en": "Senegal", "played": 2, "won": 0, "drawn": 0, "lost": 2, "gf": 3, "ga": 6, "gd": -3, "points": 0 },
+        { "pos": 4, "team_name_en": "Iraq", "played": 2, "won": 0, "drawn": 0, "lost": 2, "gf": 1, "ga": 7, "gd": -6, "points": 0 }
+      ],
+      "matches": [
+        { "matchday": 1, "date": "2026-06-16", "home": "France", "away": "Senegal", "home_goals": 3, "away_goals": 1, "source": "cited" },
+        { "matchday": 1, "date": "2026-06-17", "home": "Iraq", "away": "Norway", "home_goals": 1, "away_goals": 4, "source": "cited" },
+        { "matchday": 2, "date": "2026-06-22", "home": "France", "away": "Iraq", "home_goals": 3, "away_goals": 0, "source": "cited" },
+        { "matchday": 2, "date": "2026-06-22", "home": "Norway", "away": "Senegal", "home_goals": 3, "away_goals": 2, "source": "derived" }
+      ]
+    },
+    {
+      "group": "J",
+      "updated_through_date": "2026-06-22",
+      "standings": [
+        { "pos": 1, "team_name_en": "Argentina", "played": 2, "won": 2, "drawn": 0, "lost": 0, "gf": 5, "ga": 0, "gd": 5, "points": 6 },
+        { "pos": 2, "team_name_en": "Austria", "played": 2, "won": 1, "drawn": 0, "lost": 1, "gf": 3, "ga": 3, "gd": 0, "points": 3 },
+        { "pos": 3, "team_name_en": "Algeria", "played": 2, "won": 1, "drawn": 0, "lost": 1, "gf": 2, "ga": 4, "gd": -2, "points": 3 },
+        { "pos": 4, "team_name_en": "Jordan", "played": 2, "won": 0, "drawn": 0, "lost": 2, "gf": 2, "ga": 5, "gd": -3, "points": 0 }
+      ],
+      "matches": [
+        { "matchday": 1, "date": "2026-06-16", "home": "Argentina", "away": "Algeria", "home_goals": 3, "away_goals": 0, "source": "cited" },
+        { "matchday": 1, "date": "2026-06-16", "home": "Austria", "away": "Jordan", "home_goals": 3, "away_goals": 1, "source": "derived" },
+        { "matchday": 2, "date": "2026-06-22", "home": "Argentina", "away": "Austria", "home_goals": 2, "away_goals": 0, "source": "cited" },
+        { "matchday": 2, "date": "2026-06-22", "home": "Jordan", "away": "Algeria", "home_goals": 1, "away_goals": 2, "source": "cited" }
+      ]
+    },
+    {
+      "group": "K",
+      "updated_through_date": "2026-06-23",
+      "standings": [
+        { "pos": 1, "team_name_en": "Colombia", "played": 2, "won": 2, "drawn": 0, "lost": 0, "gf": 4, "ga": 1, "gd": 3, "points": 6 },
+        { "pos": 2, "team_name_en": "Portugal", "played": 2, "won": 1, "drawn": 1, "lost": 0, "gf": 6, "ga": 1, "gd": 5, "points": 4 },
+        { "pos": 3, "team_name_en": "DR Congo", "played": 2, "won": 0, "drawn": 1, "lost": 1, "gf": 1, "ga": 2, "gd": -1, "points": 1 },
+        { "pos": 4, "team_name_en": "Uzbekistan", "played": 2, "won": 0, "drawn": 0, "lost": 2, "gf": 1, "ga": 8, "gd": -7, "points": 0 }
+      ],
+      "matches": [
+        { "matchday": 1, "date": "2026-06-17", "home": "Portugal", "away": "DR Congo", "home_goals": 1, "away_goals": 1, "source": "cited" },
+        { "matchday": 1, "date": "2026-06-17", "home": "Uzbekistan", "away": "Colombia", "home_goals": 1, "away_goals": 3, "source": "cited" },
+        { "matchday": 2, "date": "2026-06-23", "home": "Portugal", "away": "Uzbekistan", "home_goals": 5, "away_goals": 0, "source": "confirmed" },
+        { "matchday": 2, "date": "2026-06-23", "home": "Colombia", "away": "DR Congo", "home_goals": 1, "away_goals": 0, "source": "cited" }
+      ]
+    },
+    {
+      "group": "L",
+      "updated_through_date": "2026-06-23",
+      "standings": [
+        { "pos": 1, "team_name_en": "England", "played": 2, "won": 1, "drawn": 1, "lost": 0, "gf": 4, "ga": 2, "gd": 2, "points": 4 },
+        { "pos": 2, "team_name_en": "Ghana", "played": 2, "won": 1, "drawn": 1, "lost": 0, "gf": 1, "ga": 0, "gd": 1, "points": 4 },
+        { "pos": 3, "team_name_en": "Croatia", "played": 2, "won": 1, "drawn": 0, "lost": 1, "gf": 3, "ga": 4, "gd": -1, "points": 3 },
+        { "pos": 4, "team_name_en": "Panama", "played": 2, "won": 0, "drawn": 0, "lost": 2, "gf": 0, "ga": 2, "gd": -2, "points": 0 }
+      ],
+      "matches": [
+        { "matchday": 1, "date": "2026-06-17", "home": "England", "away": "Croatia", "home_goals": 4, "away_goals": 2, "source": "cited" },
+        { "matchday": 1, "date": "2026-06-17", "home": "Ghana", "away": "Panama", "home_goals": 1, "away_goals": 0, "source": "cited" },
+        { "matchday": 2, "date": "2026-06-23", "home": "England", "away": "Ghana", "home_goals": 0, "away_goals": 0, "source": "cited" },
+        { "matchday": 2, "date": "2026-06-23", "home": "Panama", "away": "Croatia", "home_goals": 0, "away_goals": 1, "source": "cited" }
+      ]
+    }
+  ]
+}

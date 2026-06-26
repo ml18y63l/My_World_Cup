@@ -4,11 +4,13 @@ import fs from "fs";
 import path from "path";
 import type { TeamProfile, RadarMetrics, TeamOverall, OddsEntry, GroupData, StrategyData, RecentFormData, SquadData, TeamPageData } from "@/types/team";
 import type { H2HPageData } from "@/types/simulation";
+import type { GroupStageData, KnockoutStageData } from "@/types/tournament";
 import { GROUP_COLORS } from "@/types/team";
 import { calculateOverallScore } from "./score";
 import { deriveRadar } from "./deriveRadar";
 
 const DB_DIR = path.join(process.cwd(), "database", "2_ability_models");
+const TOURNAMENT_DIR = path.join(process.cwd(), "database");
 
 /**
  * 读取所有球队的 profile.json
@@ -218,4 +220,79 @@ export function getTeamPageData(teamId: string): TeamPageData | null {
   const overall_score = radar ? calculateOverallScore(radar) : 0;
   const is_placeholder = !hasRealData(squad, form, radar);
   return { profile, radar, squad, form, overall_score, is_placeholder };
+}
+
+/**
+ * team_name_en -> profile 的查找表（用于给赛事数据补上中文名 / 旗帜 / 跳转 id）
+ */
+function getProfileByEnMap(): Record<string, TeamProfile> {
+  const profiles = getAllTeamProfiles();
+  const map: Record<string, TeamProfile> = {};
+  for (const p of profiles) map[p.team_name_en] = p;
+  return map;
+}
+
+const EMPTY_GROUP_STAGE: GroupStageData = {
+  tournament: "",
+  rounds_complete: 0,
+  total_rounds: 3,
+  updated_through_date: "",
+  source: "",
+  note: "",
+  groups: [],
+};
+
+const EMPTY_KNOCKOUT: KnockoutStageData = {
+  tournament: "",
+  started: false,
+  note: "",
+  format: "",
+  third_place_count: 8,
+  rounds: [],
+};
+
+/**
+ * 读取小组赛数据（积分榜 + 赛果），并关联 profile 的中文名 / 旗帜 / team_id
+ */
+export function getGroupStageData(): GroupStageData {
+  const filePath = path.join(TOURNAMENT_DIR, "group_stage.json");
+  if (!fs.existsSync(filePath)) return EMPTY_GROUP_STAGE;
+  const data: GroupStageData = JSON.parse(fs.readFileSync(filePath, "utf-8"));
+  const profileMap = getProfileByEnMap();
+  for (const g of data.groups) {
+    g.standings = g.standings.map((row) => {
+      const p = profileMap[row.team_name_en];
+      return {
+        ...row,
+        team_name: p?.team_name,
+        team_id: p?.team_id,
+        country_code: p?.country_code,
+      };
+    });
+  }
+  return data;
+}
+
+/**
+ * 读取淘汰赛对阵框架，并关联 profile（小组赛未结束，球队均为空）
+ */
+export function getKnockoutStageData(): KnockoutStageData {
+  const filePath = path.join(TOURNAMENT_DIR, "knockout_stage.json");
+  if (!fs.existsSync(filePath)) return EMPTY_KNOCKOUT;
+  const data: KnockoutStageData = JSON.parse(fs.readFileSync(filePath, "utf-8"));
+  const profileMap = getProfileByEnMap();
+  for (const round of data.rounds) {
+    round.ties = round.ties.map((tie) => {
+      const h = tie.home_team ? profileMap[tie.home_team] : undefined;
+      const a = tie.away_team ? profileMap[tie.away_team] : undefined;
+      return {
+        ...tie,
+        home_team_name: h?.team_name,
+        away_team_name: a?.team_name,
+        home_country_code: h?.country_code,
+        away_country_code: a?.country_code,
+      };
+    });
+  }
+  return data;
 }

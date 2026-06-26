@@ -5,6 +5,8 @@ import { usePathname } from "next/navigation";
 
 const NAV_ITEMS = [
   { label: "赛事概览", href: "/" },
+  { label: "小组赛进程", href: "/group-stage" },
+  { label: "淘汰赛进程", href: "/knockout" },
   { label: "球队画像", href: "/team" },
   { label: "对阵模拟", href: "/h2h" },
 ];
