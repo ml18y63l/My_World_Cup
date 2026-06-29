@@ -3,10 +3,10 @@
   "team_name": "西班牙",
   "team_name_en": "Spain",
   "confederation": "UEFA",
-  "head_coach": "德拉富恩特",
-  "total_value_m_euros": 1050,
-  "fifa_ranking": 8,
-  "base_formation": "4-3-3",
+  "head_coach": "路易斯·德拉富恩特",
+  "total_value_m_euros": 1222,
+  "fifa_ranking": 2,
   "country_code": "es",
-  "group": "H"
+  "group": "H",
+  "qualification": "UEFA Group E winner"
 }
