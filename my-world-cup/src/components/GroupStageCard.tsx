@@ -38,7 +38,7 @@ function MatchRow({
   );
 }
 
-const MATCHDAYS = [1, 2] as const;
+const MATCHDAYS = [1, 2, 3] as const;
 
 export function GroupStageCard({ group }: { group: GroupStageGroup }) {
   const color = GROUP_COLORS[group.group] ?? "#999";

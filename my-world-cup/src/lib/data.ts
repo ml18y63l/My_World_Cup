@@ -45,10 +45,14 @@ export function getRadarData(teamNameEn: string): RadarMetrics | null {
  */
 export function getAllTeamsWithOverall(): TeamOverall[] {
   const profiles = getAllTeamProfiles();
+  const formMap = getRecentFormsMap();
   return profiles.map((profile) => {
     const radar = getRadarData(profile.team_name_en);
+    const squad = getSquad(profile.team_name_en);
+    const form = formMap[profile.team_name_en] ?? null;
     const overall_score = radar ? calculateOverallScore(radar) : 0;
-    return { ...profile, overall_score };
+    const is_placeholder = !hasRealData(squad, form, radar);
+    return { ...profile, overall_score, is_placeholder };
   });
 }
 

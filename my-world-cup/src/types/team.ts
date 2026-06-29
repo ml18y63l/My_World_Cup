@@ -33,6 +33,8 @@ export interface RadarData {
 
 export interface TeamOverall extends TeamProfile {
   overall_score: number;
+  /** true = 尚未录入真实数据（占位），概览页据此将其能力值置灰 */
+  is_placeholder?: boolean;
 }
 
 export interface OddsEntry {

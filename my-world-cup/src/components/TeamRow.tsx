@@ -3,6 +3,7 @@ import type { TeamOverall } from "@/types/team";
 
 export function TeamRow({ team }: { team: TeamOverall }) {
   const flagUrl = `https://flagcdn.com/w20/${team.country_code}.png`;
+  const placeholder = team.is_placeholder ?? false;
 
   return (
     <Link
@@ -20,7 +21,12 @@ export function TeamRow({ team }: { team: TeamOverall }) {
         />
         <span className="font-medium text-[11px]">{team.team_name}</span>
       </div>
-      <span className="text-[#3b82f6] font-bold text-[10px]">
+      <span
+        className={`font-bold text-[10px] ${
+          placeholder ? "text-gray-300" : "text-[#3b82f6]"
+        }`}
+        title={placeholder ? "占位数据 · 无参考价值" : undefined}
+      >
         {team.overall_score}
       </span>
     </Link>
